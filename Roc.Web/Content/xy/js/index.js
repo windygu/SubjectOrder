@@ -113,6 +113,7 @@ $(function () {
             model.address = $("#address").val();
             model.paytype = $("#type").val();
             model.remark = $("#remark").val();
+            model.source = 1;
        
             $.ajax({
                 url: '/OrderServiceX/CommitOrder/?rd=' + Math.random(),
@@ -121,7 +122,7 @@ $(function () {
                 contentType: "application/json; charset=utf-8",
                 dataType: 'JSON',
                 success: function (result) {
-
+                     $('#buyForm')[0].reset()
                     alert(result.message);
                     //if (result.status == "1") {
 

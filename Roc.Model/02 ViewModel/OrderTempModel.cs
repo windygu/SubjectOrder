@@ -18,6 +18,7 @@ namespace Roc.Model.ViewModel
         public string paytype { set; get; }
         public string remark { set; get; }
         public string count { set; get; }
+        public string source { set; get; }
     }
 
 }

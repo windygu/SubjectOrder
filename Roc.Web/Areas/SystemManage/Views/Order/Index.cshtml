@@ -20,12 +20,12 @@
 
                 { label: '地址', name: 'F_Address', width: 120, align: 'left' },
                 {
-                    label: '产品', name: 'F_ProductId', width: 100, align: 'center',
+                    label: '产品名称', name: 'F_ProductName', width: 180, align: 'center',
                     formatter: function (cellvalue, options, rowObject) {
-                        if (cellvalue == 0) {
-                            return '<span class=\"label label-success\">非支付型订单</span>';
-                        } else {
+                        if (cellvalue!=null) {
                             return cellvalue;
+                        } else {
+                            return '';
                         }
 
                     }
@@ -34,9 +34,9 @@
                     label: '付款类型', name: 'F_PayType', width: 80, align: 'center',
                     formatter: function (cellvalue, options, rowObject) {
                         if (cellvalue == 1) {
-                            return '<span class=\"label label-success\">货到付款</span>';
+                            return '货到付款';
                         } else if (cellvalue == 0) {
-                            return '<span class=\"label label-success\">在线支付</span>';
+                            return '在线支付';
                         } else
                             return '-';
                     }
@@ -147,17 +147,17 @@
         })
       
     }
-    function btn_details() {
-        var keyValue = $("#gridList").jqGridRowValue().F_Id;
-        $.modalOpen({
-            id: "Details",
-            title: "查看订单",
-            url: "/SystemManage/Order/Details?keyValue=" + keyValue,
-            width: "700px",
-            height: "550px",
-            btn: null,
-        });
-    }
+    //function btn_details() {
+    //    var keyValue = $("#gridList").jqGridRowValue().F_Id;
+    //    $.modalOpen({
+    //        id: "Details",
+    //        title: "查看订单",
+    //        url: "/SystemManage/Order/Details?keyValue=" + keyValue,
+    //        width: "700px",
+    //        height: "550px",
+    //        btn: null,
+    //    });
+    //}
     function btn_revisepassword() {
         var keyValue = $("#gridList").jqGridRowValue().F_Id;
         var Account = $("#gridList").jqGridRowValue().F_Account;

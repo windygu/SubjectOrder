@@ -31,6 +31,8 @@ namespace Roc.Web.Controllers
             orderEntity.F_ShortAddress = data.address;
             orderEntity.F_PayType = data.paytype.ToInt();
             orderEntity.F_Remark = data.remark;
+            orderEntity.F_Source = data.source.ToInt();
+            orderEntity.F_ProductName = data.productname;
             orderApp.SubmitForm(orderEntity, null, "");
              
             return AjaxSuccess("恭喜您！订单已经生成我们会在收到订单后第一时间联系您！请耐心等待！");
