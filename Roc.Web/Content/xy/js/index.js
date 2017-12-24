@@ -113,8 +113,7 @@ $(function () {
             model.address = $("#address").val();
             model.paytype = $("#type").val();
             model.remark = $("#remark").val();
-        
-            alert(JSON.stringify(model));
+       
             $.ajax({
                 url: '/OrderServiceX/CommitOrder/?rd=' + Math.random(),
                 type: "POST",
@@ -122,7 +121,8 @@ $(function () {
                 contentType: "application/json; charset=utf-8",
                 dataType: 'JSON',
                 success: function (result) {
-                    alert(result);
+
+                    alert(result.message);
                     //if (result.status == "1") {
 
                     //    alert('提交成功，我们会在收到信息后第一时间联系您');

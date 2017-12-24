@@ -47,7 +47,7 @@ namespace Roc.Web
         }
         protected  JsonResult AjaxSuccess(string message)
         {
-            return Json(new AjaxResult { state = ResultType.success.ToString(), message = message}.ToJson(),JsonRequestBehavior.AllowGet);
+            return Json(new AjaxResult { state = ResultType.success.ToString(), message = message},JsonRequestBehavior.AllowGet);
         }
     }
 }
