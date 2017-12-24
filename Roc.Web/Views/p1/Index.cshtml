@@ -371,47 +371,45 @@
             </div>
         </form>
         <script>
-                                                function formcommit(fn) {
+                function formcommit(fn) {
 
-                                                    var name = '';
-                                                    var phone = '';
+                    var name = '';
+                    var phone = '';
 
-                                                    if (fn == 'form1') {
-                                                        name = $("#txtname1").val();
-                                                        phone = $("#txtphone1").val();
-                                                    } else {
-                                                        name = $("#txtname2").val();
-                                                        phone = $("#txtphone2").val();
-                                                    }
-                                                    if (name == "" || phone == "") {
-                                                        alert('请输入您完整信息，方便我们及时与您联系');
-                                                        return;
-                                                    }
-
-
-                                                    $.ajax({
-                                                        url: 'http://p1.andus-china.com/OrderService/CommitOrder?rd=' + Math.random(),
-                                                        type: "POST",
-                                                        data: { username: name, userphone: phone },
-                                                        dataType: 'JSON',
-                                                        success: function (result) {
-                                                            if (result.status == "1") {
-                                                                if (fn == 'form1') {
-                                                                    $("#txtname1").val("");
-                                                                    $("#txtphone1").val("");
-                                                                } else {
-                                                                    $("#txtname2").val("");
-                                                                    $("#txtphone2").val("");
-                                                                }
-                                                                alert('提交成功，我们会在收到信息后第一时间联系您');
-
-                                                            }
-                                                        }
-                                                    });
-
-                                                }
+                    if (fn == 'form1') {
+                        name = $("#txtname1").val();
+                        phone = $("#txtphone1").val();
+                    } else {
+                        name = $("#txtname2").val();
+                        phone = $("#txtphone2").val();
+                    }
+                    if (name == "" || phone == "") {
+                        alert('请输入您完整信息，方便我们及时与您联系');
+                        return;
+                    }
 
 
+                    $.ajax({
+                        url: 'http://p1.andus-china.com/OrderService/CommitOrder?rd=' + Math.random(),
+                        type: "POST",
+                        data: { username: name, userphone: phone },
+                        dataType: 'JSON',
+                        success: function (result) {
+                            if (result.status == "1") {
+                                if (fn == 'form1') {
+                                    $("#txtname1").val("");
+                                    $("#txtphone1").val("");
+                                } else {
+                                    $("#txtname2").val("");
+                                    $("#txtphone2").val("");
+                                }
+                                alert('提交成功，我们会在收到信息后第一时间联系您');
+
+                            }
+                        }
+                    });
+
+                }
         </script>
         <link rel="stylesheet" href="/content/assets/photoswipe.css" />
         <link rel="stylesheet" href="/content/assets/default-skin.css" />

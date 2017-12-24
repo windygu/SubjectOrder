@@ -29,6 +29,7 @@ namespace Roc.Model.Entity.SystemManage
         public int F_Status { set; get; }
         public int F_TalkStatus { set; get; }
         public int F_ProductId { set; get; }
+        public string F_ProductName { set; get; }
         public String F_Remark { get; set; }
         public Boolean? F_DeleteMark { get; set; }
         public Boolean? F_EnabledMark { get; set; }

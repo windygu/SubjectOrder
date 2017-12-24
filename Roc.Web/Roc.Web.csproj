@@ -109,6 +109,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\01 Handler\ApiBaseController.cs" />
     <Compile Include="App_Start\01 Handler\HandlerAjaxOnlyAttribute.cs" />
     <Compile Include="App_Start\01 Handler\HandlerAuthorizeAttribute.cs" />
     <Compile Include="App_Start\01 Handler\HandlerErrorAttribute.cs" />
@@ -145,6 +146,8 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\OrderServiceController.cs" />
+    <Compile Include="Controllers\OrderServiceXController.cs" />
+    <Compile Include="Controllers\p2Controller.cs" />
     <Compile Include="Controllers\p1Controller.cs" />
     <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Global.asax.cs">
@@ -447,8 +450,34 @@
     <Content Include="Content\js\zsign\jquery.zsign.css" />
     <Content Include="Content\js\zsign\jquery.zsign.js" />
     <Content Include="Content\js\zsign\signet.gif" />
+    <Content Include="Content\xy\css\index.css" />
+    <Content Include="Content\xy\images\index-01.png" />
+    <Content Include="Content\xy\images\index-02.png" />
+    <Content Include="Content\xy\images\index-03.png" />
+    <Content Include="Content\xy\images\index-04.png" />
+    <Content Include="Content\xy\images\index-05.png" />
+    <Content Include="Content\xy\images\index-06.png" />
+    <Content Include="Content\xy\images\index-07.png" />
+    <Content Include="Content\xy\images\index-08.png" />
+    <Content Include="Content\xy\images\index-09.png" />
+    <Content Include="Content\xy\images\index-10.png" />
+    <Content Include="Content\xy\images\index-11.png" />
+    <Content Include="Content\xy\images\index-12.png" />
+    <Content Include="Content\xy\images\label.png" />
+    <Content Include="Content\xy\js\city-picker.js" />
+    <Content Include="Content\xy\js\city-picker.min.js" />
+    <Content Include="Content\xy\js\index.js" />
+    <Content Include="Content\xy\js\jquery-2.1.4.js" />
+    <Content Include="Content\xy\js\jquery-weui.css" />
+    <Content Include="Content\xy\js\jquery-weui.js" />
+    <Content Include="Content\xy\js\jquery-weui.min.css" />
+    <Content Include="Content\xy\js\jquery-weui.min.js" />
+    <Content Include="Content\xy\js\jquery.form.min.js" />
+    <Content Include="Content\xy\js\weui.css" />
+    <Content Include="Content\xy\js\weui.min.css" />
     <Content Include="Global.asax" />
     <Content Include="Index.htm" />
+    <None Include="Views\p2\index.cshtml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>

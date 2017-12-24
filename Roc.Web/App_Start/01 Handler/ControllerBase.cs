@@ -45,5 +45,9 @@ namespace Roc.Web
         {
             return Content(new AjaxResult { state = ResultType.error.ToString(), message = message }.ToJson());
         }
+        protected  JsonResult AjaxSuccess(string message)
+        {
+            return Json(new AjaxResult { state = ResultType.success.ToString(), message = message}.ToJson(),JsonRequestBehavior.AllowGet);
+        }
     }
 }
