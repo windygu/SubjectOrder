@@ -114,6 +114,7 @@ $(function () {
             model.paytype = $("#type").val();
             model.remark = $("#remark").val();
             model.source = 1;
+            model.count = $("#count").val();
        
             $.ajax({
                 url: '/OrderServiceX/CommitOrder/?rd=' + Math.random(),
