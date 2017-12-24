@@ -20,7 +20,24 @@ namespace Roc.Repository.SystemManage
     {
         public void DeleteForm(string keyValue)
         {
-            throw new System.NotImplementedException();
+            using (var db = base.Connection)
+            {
+                db.Open();
+                var tran = db.BeginTransaction();
+                try
+                {
+                    var sql = base.GetSqlLam().Delete(m => m.F_Id == keyValue);
+                    db.Execute(sql.SqlString, sql.Parameters, tran);
+
+                    var query = new SqlLam<UserLogOnEntity>().Delete(m => m.F_UserId == keyValue);
+                    db.Execute(query.SqlString, query.Parameters, tran);
+                    tran.Commit();
+                }
+                catch
+                {
+                    tran.Rollback();
+                }
+            }
         }
 
         public void SubmitForm(OrderEntity orderEntity, UserLogOnEntity userLogOnEntity, string keyValue)
@@ -45,12 +62,14 @@ namespace Roc.Repository.SystemManage
                      
                     }
                     tran.Commit();
+                    db.Close();
                     
                 }
                 catch(Exception ex)
                 {
                     tran.Rollback();
                 }
+               
             }
         }
     }

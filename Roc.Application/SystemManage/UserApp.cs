@@ -29,6 +29,7 @@ namespace Roc.Application.SystemManage
                 expression = expression.Or(t => t.F_MobilePhone.Contains(keyword));
             }
             expression = expression.And(t => t.F_Account != "admin");
+ 
             return service.GetPagingList(pagination, expression, m => m.F_Id).ToList();
         }
         public UserEntity GetForm(string keyValue)

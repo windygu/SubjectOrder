@@ -25,8 +25,11 @@ namespace Roc.Application.SystemManage
         {
             return service.GetList().OrderBy(t => t.F_CreatorTime).ToList();
         }
-
-	    public OrderEntity GetForm(string keyValue)
+        public void DeleteForm(string keyValue)
+        {
+            service.DeleteForm(keyValue);
+        }
+        public OrderEntity GetForm(string keyValue)
         {
             return service.Get(m => m.F_Id == keyValue);
         }
@@ -41,6 +44,10 @@ namespace Roc.Application.SystemManage
                 orderEntity.Create();
             }
             service.SubmitForm(orderEntity, userLogOnEntity, keyValue);
+        }
+        public void UpdateForm(OrderEntity orderEntity)
+        {
+            service.Update(orderEntity, m => m.F_Id == orderEntity.F_Id);
         }
     }
 }
