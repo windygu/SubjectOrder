@@ -1,0 +1,113 @@
+﻿@{
+    ViewBag.Title = "Form";
+    Layout = "~/Views/Shared/_Form.cshtml";
+}
+<script>
+    var keyValue = $.request("keyValue");
+    $(function () {
+       // initControl();
+        if (!!keyValue) {
+            $.ajax({
+                url: "/SystemManage/Order/GetFormJson",
+                data: { keyValue: keyValue },
+                dataType: "json",
+                async: false,
+                success: function (data) {
+                    $("#form1").formSerialize(data);
+                }
+            });
+        }
+    });
+    function initControl() {
+        $("#F_ParentId").bindSelect({
+            url: "/SystemManage/Order/GetTreeSelectJson"
+        });
+    }
+    function submitForm() {
+        if (!$('#form1').formValid()) {
+            return false;
+        }
+        $.submitForm({
+            url: "/SystemManage/Order/SubmitForm?keyValue=" + keyValue,
+            param: $("#form1").formSerialize(),
+            success: function () {
+                $.currentWindow().$("#gridList").resetSelection();
+                $.currentWindow().$("#gridList").trigger("reloadGrid");
+            }
+        })
+    }
+</script>
+
+<form id="form1">
+    <div style="padding-top: 20px; margin-right: 20px;">
+        <table class="form">
+            <tr>
+                <th class="formTitle">产品</th>
+                <td class="formValue">
+                    <select id="F_ProductId" name="F_ProductId" class="form-control required">
+                        <option value="-1">==请选择==</option>
+                        <option value="1">==产品1==</option>
+                        <option value="2">==产品2==</option>
+                        <option value="3">==产品3==</option>
+                        <option value="4">==产品4==</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th class="formTitle">数量</th>
+                <td class="formValue">
+                    <select id="F_Count" name="F_Count" class="form-control required">
+                        <option value="1">1</option>
+                        <option value="1">2</option>
+                        <option value="1">3</option>
+                        <option value="1">4</option>
+                        <option value="1">5</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th class="formTitle">姓名</th>
+                <td class="formValue">
+                    <input id="F_UserName" name="F_UserName" type="text" class="form-control required" />
+                </td>
+            </tr>
+            <tr>
+                <th class="formTitle">手机号</th>
+                <td class="formValue">
+                    <input id="F_UserTelphone" name="F_UserTelphone" type="text" class="form-control required" />
+                </td>
+            </tr>
+            <tr>
+                <th class="formTitle">地区</th>
+                <td class="formValue">
+                    <input id="F_ShortAddress" name="F_ShortAddress" type="text" class="form-control required" />
+                </td>
+            </tr>
+            <tr>
+                <th class="formTitle" style="height: 35px;">货到付款</th>
+                <td class="formValue" style="padding-top: 1px;">
+                    <select id="F_PayType" name="F_PayType" class="form-control">
+                        <option value="-1">=请选择=</option>
+                        <option value="1">是</option>
+                        <option value="0">否</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th class="formTitle">地址</th>
+                <td class="formValue">
+                    <input id="F_Address" name="F_Address" type="text" class="form-control required" />
+                </td>
+            </tr>
+
+            <tr>
+                <th class="formTitle" valign="top" style="padding-top: 5px;">
+                    留言
+                </th>
+                <td class="formValue">
+                    <textarea id="F_Remark" name="F_Remark" class="form-control" style="height: 60px;"></textarea>
+                </td>
+            </tr>
+        </table>
+    </div>
+</form>

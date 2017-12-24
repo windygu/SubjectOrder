@@ -1,0 +1,173 @@
+.tel-btn {
+    display: block;
+    margin: 16px auto;
+    cursor: pointer;
+    color: #fff;
+    height: 44px;
+    line-height: 44px;
+    background-color: #f85959;
+    text-align: center;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tel-btn.style7 {
+    font-size: 14px;
+    justify-content: flex-start;
+    display: block;
+    text-align: start;
+}
+/*.tel-btn .icon-telphone_left,*/
+.tel-btn .icon-telphone_right,
+.tel-btn .icon-telphone_circle{
+    display: none;
+}
+.tel-btn .icon-telphone_left{
+    margin-right: 5px;
+}
+.tel-btn .icon-telphone_right{
+    margin-left: 5px;
+}
+.tel-btn.style7 .icon-telphone_left{
+    /*margin-left: 20px;*/
+    color: #ccc;
+}
+
+.tel-btn.style1 .icon-telphone_left,
+.tel-btn.style2 .icon-telphone_left{
+    display: inline;
+}
+.tel-btn.style1 .icon-telphone_right,
+.tel-btn.style1 .icon-telphone_circle,
+.tel-btn.style2 .icon-telphone_right,
+.tel-btn.style2 .icon-telphone_circle{
+    display: none;
+}
+
+.tel-btn.style3 .icon-telphone_circle,
+.tel-btn.style4 .icon-telphone_circle{
+    display: inline;
+    height: 56px;
+    line-height: 56px;
+}
+
+.tel-btn.style3 .tel-label,
+.tel-btn.style4 .tel-label,
+.tel-btn.style3 .icon-telphone_left,
+.tel-btn.style3 .icon-telphone_right,
+.tel-btn.style4 .icon-telphone_left,
+.tel-btn.style4 .icon-telphone_right{
+    display: none;
+}
+.tel-btn.style3,
+.tel-btn.style4{
+    width: 56px !important;
+    border-radius: 50%;
+    line-height: 61px;
+    font-size: 28px;
+    opacity: 0.7;
+}
+
+.tel-btn.style3:active,
+.tel-btn.style3:focus,
+.tel-btn.style4:active,
+.tel-btn.style4:focus{
+    opacity: 0.5;
+}
+
+
+
+.tel-btn.style5 .icon-telphone_right,
+.tel-btn.style6 .icon-telphone_right{
+    display: inline;
+}
+.tel-btn.style5 .icon-telphone_left,
+.tel-btn.style5 .icon-telphone_circle,
+.tel-btn.style6 .icon-telphone_left,
+.tel-btn.style6 .icon-telphone_circle{
+    display: none;
+}
+
+.tel-btn.style1 .icon-left_arrow,
+.tel-btn.style2 .icon-left_arrow,
+.tel-btn.style3 .icon-left_arrow,
+.tel-btn.style4 .icon-left_arrow,
+.tel-btn.style5 .icon-left_arrow,
+.tel-btn.style6 .icon-left_arrow{
+    display: none;
+}
+
+.tel-btn.style7 .icon-left_arrow{
+    /*position: absolute;*/
+    /*right: 10px;*/
+    float: right;
+    color: #ccc;
+    width: 20px;
+    height: 20px;
+}
+
+a.tel-btn:hover,
+a.tel-btn:focus {
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+}
+
+
+.ftop>.tel-btn {
+    width: 100% !important;
+    border-radius: 0;
+    opacity: 0.95;
+}
+.fbottom>.tel-btn {
+    width: 100% !important;
+    border-radius: 0;
+    opacity: 0.95;
+}
+
+
+.piece.fbottom-right,
+.piece.fbottom-left,
+.piece.ftop-right,
+.piece.ftop-left{
+    width: 56px;
+}
+
+
+.piece.phone-pos.fbottom-right{
+    /*// position: fixed;*/
+    /*// bottom: 79px;*/
+    /*// right: 10px;*/
+    z-index:99;
+    margin:10px auto;
+}
+.piece.phone-pos.fbottom-left{
+    /*// position: fixed;*/
+    /*// bottom: 79px;*/
+    /*// left: 10px;*/
+    z-index:99;
+    margin: 10px auto;
+}
+.piece.phone-pos.ftop-right{
+    position: fixed;
+    top: 79px;
+    right: 10px;
+    z-index: 99;
+}
+
+.piece.phone-pos.ftop-left{
+    position: fixed;
+    top: 79px;
+    left: 10px;
+    z-index: 99;
+}
+
+
+
+
+

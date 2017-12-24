@@ -1,0 +1,453 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = null;
+}
+<!DOCTYPE html>
+<!-- saved from url=(0069)http://www.chengzijianzhan.com/tetris/page/64007889940/?tag=pc_iframe -->
+<html class="wf-iconfont-n4-active wf-active">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="pathname" content="bytecom_tetris">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta id="vp" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,minimal-ui">
+    <title>赵忠祥</title>
+    <script>
+        (function () {
+            var oVp = document.getElementById("vp");
+            var agent = navigator.userAgent.toLowerCase();
+            var version;
+            if (agent.indexOf("like mac os x") > 0) {
+                //ios
+                var regStr_saf = /os [\d._]*/gi;
+                var verinfo = agent.match(regStr_saf);
+                version = (verinfo + "").replace(/[^0-9|_.]/ig, "").replace(/_/ig, ".");
+            }
+
+            var version_str = version + "";
+            if (version_str != "undefined" && version_str.length > 0) {
+                version = version.substring(0, 1);
+                if (version <= 8) {
+                    oVp.content = "initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,minimal-ui";
+                }
+            }
+        })()</script>
+
+    <link rel="stylesheet" type="text/css" href="/content/assets/colorA_c7f3e67.css">
+    <link rel="stylesheet" href="/content/assets/bootstrap_6229293.css">
+    <link rel="stylesheet" href="/content/assets/brand_3f5ddbf.css">
+    <link rel="stylesheet" href="/content/assets/iconfont_702b8d1.css">
+    <link rel="stylesheet" href="/content/assets/swiper_1cb7862.css">
+    <link rel="stylesheet" href="/content/assets/daymode_ae958b1.css">
+    <link rel="stylesheet" href="/content/assets/notice_b791232.css">
+    <link rel="stylesheet" href="/content/assets/default_b89dcae.css">
+    <link rel="stylesheet" href="/content/assets/form_71e0b11.css">
+    <link rel="stylesheet" href="/content/assets/image_4b2424d.css">
+    <link rel="stylesheet" href="/content/assets/layout_6fc9bcf.css">
+    <link rel="stylesheet" href="/content/assets/phone_cc0832c.css">
+    <link rel="stylesheet" href="/content/assets/text_1909920.css">
+    <script src="/content/assets/jquery-3.2.1.min.js"></script>
+
+    <link rel="stylesheet" href="/content/assets/photoswipe.css" />
+    <link rel="stylesheet" href="/content/assets/default-skin.css" />
+    <script type="text/javascript" src="/content/assets/photoswipe.min.js"></script>
+    <script type="text/javascript" src="/content/assets/photoswipe-ui-default.min.js"></script>
+    <script>
+        var pswpElement = document.querySelectorAll('.pswp')[0];
+        var imgs = document.querySelectorAll(".img-list img");
+        var count = imgs.length;
+        var items = [];
+        for (var i = 0, j = count; i < j; i++) {
+            (function (img, i) {
+                var loader = new Image();
+                loader.onload = function () {
+                    count--;
+                    items.push({
+                        src: loader.src,
+                        w: loader.width,
+                        h: loader.height
+                    });
+                    if (loader.width > loader.height) {
+                        img.width = window.innerWidth;
+                    } else {
+                        img.height = window.innerHeight;
+                    }
+                    img.onclick = function () {
+                        var options = {
+                            index: i
+                        };
+                        var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+                        gallery.init();
+                    }
+                }
+                loader.src = img.src;
+            })(imgs[i], i);
+        }
+    </script>
+
+
+</head>
+<body style="padding-bottom:44px;">
+
+    <div id="csrf"><input type="hidden" name="csrfmiddlewaretoken" value="M8pGzPX917WCh22aaT6AxXka7iVbp8k6"></div><div id="content">
+    <div class="piece image-con" tetris-data-click="" tetris-data-component-type="image" tetris-data-action-type="click" style="padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px;" data-idx="0">
+        <div class="image-box">
+            <a target="_blank" class="image-link">
+                <img class="image-item" src="/content/assets/4a2b000193257c6f33d8.jpg">
+            </a>
+            <span class="image-text"></span>
+        </div>
+    </div>
+    <div class="piece" style="background-size: 100% 100%; background-repeat: no-repeat no-repeat; background-position: initial; background-color: transparent;" data-idx="1">
+        <div class="layout-wrapper layout-container-table">
+            <div class="cell group0" style="width:100%">
+                <div class="piece text-piece" data-idx="2">
+                    <div class="rich-text" style="padding: 10px 15px 10px 15px;"><div class="inner"><div style="text-align: center;"><br></div></div></div>
+                </div>
+            </div><div class="cell group1" style="width:0%"></div>
+        </div>
+    </div>
+    <div class="piece text-piece" data-idx="3">
+        <div class="rich-text" style="padding: 10px 15px 10px 15px;"><div class="inner"><div style="text-align: center;"><b style="font-family: inherit;"><font color="#ff0000">无意向客户烦请不要填写表单</font></b></div></div></div>
+    </div>
+    <div class="piece form-piece" data-idx="4">
+        <div class="form-count" data-node="topCount">
+            <span class="split-count"></span>
+            <span class="count-text" data-node="countTextPre"></span>
+            <span class="count-text-num" data-node="countTextNum"></span>
+            <span class="count-text" data-node="countTextPos"></span>
+            <span class="split-count"></span>
+        </div>
+        <form class="form-group-i container-fluid input-style2" form_id="1585662318393406" id="931a398f_e36dbd5d_3872f0b2" style="background-color: transparent;" action_url="/tetris/form/submit/">
+            <input type="hidden" name="site_id" value="64007889940">
+            <input type="hidden" name="ad_id" value="0">
+            <input type="hidden" name="adv_id" value="75090740463">
+            <input type="hidden" name="csrfmiddlewaretoken" value="M8pGzPX917WCh22aaT6AxXka7iVbp8k6">
+
+            <div id="formNode">
+                <div class="row">
+                    <input type="hidden" name="label_1585662318393358" value="姓名">
+                    <div class="input-group-i col-xs-12 col-sm-6 col-md-6 col-lg-6" validate="name">
+                        <span class="input-group-addon-i warn-star" id="label" style="color: #808080;">姓名</span>
+                        <div class="m-input-text">
+                            <input type="text" class="form-control form-input-i" placeholder="请输入您的姓名" id="txtname1">
+
+                        </div>
+                    </div>
+
+                    <div class="input-group-i col-xs-12 col-sm-6 col-md-6 col-lg-6" validate="captchav2">
+                        <span class="input-group-addon-i warn-star" id="label" style="color: #808080;">电话</span>
+                        <div class="m-input-text">
+                            <input type="text" class="form-control form-input-i" placeholder="请输入您的手机号码" id="txtphone1">
+
+                        </div>
+                    </div>
+                </div><div class="row">
+                    <div class="form-tel-autofillbtn " style="display:none">
+                        <label>
+                            <input class="tel-check" type="checkbox" value="0" checked="true">
+                            <span class="tel-tips">自动输入注册手机号</span>
+
+                        </label>
+                    </div>
+                </div><div class="row">
+
+                    <div class="input-group-i col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-3 col-md-6 col-lg-offset-3 col-lg-6">
+                        <div class="el-result" id="submit-result"></div>
+                        <button class="btn-i" type="button" style="border-radius:4px;height:42px;color:#fff" id="btncommit" onclick="formcommit('form1')">立即提交</button>
+                        <input type="reset" style="display:none;" id="reset">
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </form>
+        <div class="recent-submit-content hide" data-node="recent-submit-content">
+            <div class="recent-title">最新报名客户</div>
+            <div class="recent-notification">
+                <i class="icon-notification2"></i>
+            </div>
+            <div class="swiper-container"></div>
+        </div>
+
+    </div>
+
+    <div class="piece image-con" tetris-data-click="" tetris-data-component-type="image" tetris-data-action-type="click" style="padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px;" data-idx="5">
+        <div class="image-box">
+            <a target="_blank" class="image-link">
+                <img class="image-item" src="/content/assets/4a2f0007928b78a887df.jpg">
+            </a>
+            <span class="image-text"></span>
+        </div>
+    </div>
+
+    <div class="piece image-con" tetris-data-click="" tetris-data-component-type="image" tetris-data-action-type="click" style="padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px;background:#000 url(/content/assets/mp4bg.jpg);background-size:cover" data-idx="5">
+        <div class="image-box">
+            <video src="/content/assets/zzxvideo.mp4" controls="controls" style="width:100%;display: block;"></video>
+        </div>
+    </div>
+    <div style="font-size: 20px;padding: 10px;text-align:center;background: #D71418;color:#EACB78">
+        请加微信号 <span>pufudaa</span>
+    </div>
+    <div class="piece image-con" tetris-data-click="" tetris-data-component-type="image" tetris-data-action-type="click" style="padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px;" data-idx="6">
+        <div class="image-box">
+            <a target="_blank" class="image-link">
+                <img class="image-item" src="/content/assets/4a310002f7f632da98a6.jpg">
+            </a>
+            <span class="image-text"></span>
+        </div>
+    </div>
+    <style>
+
+        .imglist-title {
+            font-size: 20px;
+            padding: 10px;
+            text-align: center;
+            background: #D71418;
+            color: #EACB78
+        }
+
+        .img-list {
+            overflow: hidden;
+            line-height: 300px;
+            height: 300px;
+            white-space: nowrap;
+            position: relative;
+            transition: all 0.4s;
+            background: #36342E;
+        }
+
+            .img-list img {
+                display: inline-block;
+                max-height: 100%;
+                opacity: 0.3;
+                transition: all 0.4s;
+            }
+
+                .img-list img.cur-img {
+                    opacity: 1;
+                }
+    </style>
+    <div class="piece image-con">
+        <div class="imglist-title">赵忠祥老师字画作品</div>
+        <div class="image-box img-list" id="imgList">
+            <img src="/content/assets/1.jpg" class="cur-img">
+            <img src="/content/assets/2.jpg">
+            <img src="/content/assets/3.jpg">
+            <img src="/content/assets/4.jpg">
+            <img src="/content/assets/5.jpg">
+            <img src="/content/assets/6.jpg">
+            <img src="/content/assets/7.jpg">
+            <img src="/content/assets/8.jpg">
+            <img src="/content/assets/9.jpg">
+            <img src="/content/assets/10.jpg">
+            <img src="/content/assets/11.jpg">
+            <img src="/content/assets/12.jpg">
+            <img src="/content/assets/13.jpg">
+            <img src="/content/assets/14.jpg">
+            <img src="/content/assets/15.jpg">
+            <img src="/content/assets/16.jpg">
+            <img src="/content/assets/17.jpg">
+            <img src="/content/assets/18.jpg">
+            <img src="/content/assets/19.jpg">
+        </div>
+    </div>
+    <script>
+                (function () {
+                    var box = document.getElementById('imgList');
+                    var imgs = document.getElementById('imgList').getElementsByTagName('img');
+                    var count = imgs.length;
+                    var i = 0;
+                    var prev;
+                    setInterval(function () {
+                        i++;
+                        if (i >= count) {
+                            i = 0;
+                        }
+                        if (prev) {
+                            prev.className = "";
+                        }
+                        prev = imgs[i];
+                        prev.className = "cur-img";
+                        box.style.marginLeft = (-imgs[i].offsetLeft + (window.innerWidth - imgs[i].width) / 2) + 'px';
+                    }, 2000);
+                })();
+    </script>
+    <div class="piece image-con" tetris-data-click="" tetris-data-component-type="image" tetris-data-action-type="click" style="padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px;" data-idx="7">
+        <div class="image-box">
+            <a target="_blank" class="image-link">
+                <img class="image-item" src="/content/assets/4a310002fa58e5940197.jpg">
+            </a>
+            <span class="image-text"></span>
+        </div>
+    </div>
+    <div class="piece image-con" tetris-data-click="" tetris-data-component-type="image" tetris-data-action-type="click" style="padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px;" data-idx="8">
+        <div class="image-box">
+            <a target="_blank" class="image-link">
+                <img class="image-item" src="/content/assets/4a310002253edba3fc28.jpg">
+            </a>
+            <span class="image-text"></span>
+        </div>
+    </div>
+    <div class="piece text-piece" data-idx="9">
+        <div class="rich-text" style="padding: 10px 15px 10px 15px;"><div class="inner"><div style="text-align: center;"><span style="font-family: inherit; display: inline !important;"><b><font color="#ff0000">无意向客户烦请不要填写表单</font></b></span></div><div style="text-align: center;"><br></div></div></div>
+    </div>
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div>
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div>
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="piece form-piece" data-idx="10">
+        <div class="form-count" data-node="topCount">
+            <span class="split-count"></span>
+            <span class="count-text" data-node="countTextPre"></span>
+            <span class="count-text-num" data-node="countTextNum"></span>
+            <span class="count-text" data-node="countTextPos"></span>
+            <span class="split-count"></span>
+        </div>
+        <form class="form-group-i container-fluid input-style0" form_id="1585662318393406" id="85f3f06a_589213bd_58f23041" style="background-color: transparent;" action_url="/tetris/form/submit/">
+
+            <div id="formNode">
+                <div class="row">
+                    <input type="hidden" name="label_1585662318393358" value="姓名">
+                    <div class="input-group-i col-xs-12 col-sm-6 col-md-6 col-lg-6" validate="name">
+                        <span class="input-group-addon-i warn-star" id="label" style="color: #808080;">姓名</span>
+                        <div class="m-input-text">
+                            <input type="text" class="form-control form-input-i" placeholder="请输入您的姓名" id="txtname2">
+
+                        </div>
+                    </div>
+
+                    <div class="input-group-i col-xs-12 col-sm-6 col-md-6 col-lg-6" validate="captchav2">
+                        <span class="input-group-addon-i warn-star" id="label" style="color: #808080;">电话</span>
+                        <div class="m-input-text">
+                            <input type="text" class="form-control form-input-i" placeholder="请输入您的手机号码" id="txtphone2">
+
+                        </div>
+                    </div>
+                </div><div class="row">
+                    <div class="form-tel-autofillbtn " style="display:none">
+                        <label>
+                            <input class="tel-check" type="checkbox" value="0" checked="true">
+                            <span class="tel-tips">自动输入注册手机号</span>
+
+                        </label>
+                    </div>
+                </div><div class="row">
+                    <input type="hidden" name="label_1585662318393390" value="立即提交">
+                    <div class="input-group-i col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-3 col-md-6 col-lg-offset-3 col-lg-6">
+                        <div class="el-result" id="submit-result"></div>
+                        <button class="btn-i" type="button" style="border-radius:4px;height:42px;color:#fff" onclick="formcommit('form2')">立即提交</button>
+                        <input type="reset" style="display:none;" id="reset">
+                    </div>
+                </div>
+            </div>
+        </form>
+        <script>
+                                                function formcommit(fn) {
+
+                                                    var name = '';
+                                                    var phone = '';
+
+                                                    if (fn == 'form1') {
+                                                        name = $("#txtname1").val();
+                                                        phone = $("#txtphone1").val();
+                                                    } else {
+                                                        name = $("#txtname2").val();
+                                                        phone = $("#txtphone2").val();
+                                                    }
+                                                    if (name == "" || phone == "") {
+                                                        alert('请输入您完整信息，方便我们及时与您联系');
+                                                        return;
+                                                    }
+
+
+                                                    $.ajax({
+                                                        url: 'http://p1.andus-china.com/OrderService/CommitOrder?rd=' + Math.random(),
+                                                        type: "POST",
+                                                        data: { username: name, userphone: phone },
+                                                        dataType: 'JSON',
+                                                        success: function (result) {
+                                                            if (result.status == "1") {
+                                                                if (fn == 'form1') {
+                                                                    $("#txtname1").val("");
+                                                                    $("#txtphone1").val("");
+                                                                } else {
+                                                                    $("#txtname2").val("");
+                                                                    $("#txtphone2").val("");
+                                                                }
+                                                                alert('提交成功，我们会在收到信息后第一时间联系您');
+
+                                                            }
+                                                        }
+                                                    });
+
+                                                }
+
+
+        </script>
+        <link rel="stylesheet" href="/content/assets/photoswipe.css" />
+        <link rel="stylesheet" href="/content/assets/default-skin.css" />
+        <script type="text/javascript" src="/content/assets/photoswipe.min.js"></script>
+        <script type="text/javascript" src="/content/assets/photoswipe-ui-default.min.js"></script>
+        <script>
+                                            var pswpElement = document.querySelectorAll('.pswp')[0];
+                                            var imgs = document.querySelectorAll(".img-list img");
+                                            var count = imgs.length;
+                                            var items = [];
+                                            for (var i = 0, j = count; i < j; i++) {
+                                                (function (img, i) {
+                                                    var loader = new Image();
+                                                    loader.onload = function () {
+                                                        count--;
+                                                        items.push({
+                                                            src: loader.src,
+                                                            w: loader.width,
+                                                            h: loader.height
+                                                        });
+                                                        if (loader.width > loader.height) {
+                                                            img.width = window.innerWidth;
+                                                        } else {
+                                                            img.height = window.innerHeight;
+                                                        }
+                                                        img.onclick = function () {
+                                                            var options = {
+                                                                index: i
+                                                            };
+                                                            var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+                                                            gallery.init();
+                                                        }
+                                                    }
+                                                    loader.src = img.src;
+                                                })(imgs[i], i);
+                                            }
+        </script>
+    </div>
+</html>
