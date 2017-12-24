@@ -1,0 +1,125 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>好酒购买页面</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="/content/xy/js/weui.css">
+    <link rel="stylesheet" href="/content/xy/js/jquery-weui.css">
+    <link rel="stylesheet" href="/content/xy/css/index.css">
+
+</head>
+<body>
+    <div class="container">
+        <img src="/content/xy/images/index-01.png" alt="">
+        <img src="/content/xy/images/index-02.png" alt="" style="margin-top:10px">
+        <img src="/content/xy/images/index-03.png" alt="">
+        <img src="/content/xy/images/index-04.png" alt="">
+        <img src="/content/xy/images/index-05.png" alt="">
+        <img src="/content/xy/images/index-06.png" alt="">
+        <img src="/content/xy/images/index-07.png" alt="">
+        <img src="/content/xy/images/index-08.png" alt="">
+        <img src="/content/xy/images/index-09.png" alt="">
+        <img src="/content/xy/images/index-10.png" alt="">
+        <img src="/content/xy/images/index-11.png" alt="">
+        <img src="/content/xy/images/index-12.png" alt="">
+        <style>
+
+            .form-cell-con select {
+                border: none;
+                width: 100%;
+                outline: none;
+                box-sizing: border;
+                padding: 5px;
+            }
+        </style>
+        <div style="margin:20px 0 0 0">
+            <form action="/" id="buyForm">
+                <div class="form-cell clearfix">
+                    <label for="" class="required">产品</label>
+                    <div class="form-cell-con">
+                        <select required data-type="trade" name="trade" id="trade">
+                            <option value="388">套餐一：一瓶388元</option>
+                            <option value="688">套餐二：两瓶688元</option>
+                            <option value="2088">套餐三：一箱（六瓶）2088元</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-cell clearfix">
+                    <label for="" class="required">数量</label>
+                    <div class="form-cell-con clearfix sum-box" style="width:30%;padding:0 15px;">
+                        <div class="reduce">-</div>
+                        <input type="text" required value="1" data-type="count" name="count" id="count">
+                        <div class="add">+</div>
+                    </div>
+                </div>
+                <div class="form-cell clearfix">
+                    <label for="" class="required">姓名</label>
+                    <div class="form-cell-con">
+                        <input type="text" placeholder="" required data-type="name" name="name" id="name">
+                    </div>
+                </div>
+                <div class="form-cell clearfix">
+                    <label for="" class="required">手机</label>
+                    <div class="form-cell-con">
+                        <input type="text" placeholder="" required data-type="tel" name="tel" id="tel">
+                    </div>
+                </div>
+                <div class="form-cell code clearfix">
+                    <label for="" class="required " style="float: left">验证码</label>
+                    <div class="form-cell-con">
+                        <input type="text" placeholder="" required data-type="code">
+                    </div>
+                    <a herf="javascript:;">获取手机验证码</a>
+                </div>
+                <div class="form-cell clearfix">
+                    <label for="" class="required">地区</label>
+                    <div class="form-cell-con">
+                        <input type="text" id="city-picker" placeholder="请选择地区" data-type="city" required readonly name="city"  />
+                    </div>
+                </div>
+                <div class="form-cell clearfix">
+                    <label for="" class="required">地址</label>
+                    <div class="form-cell-con">
+                        <input type="text" placeholder="" required data-type="address" name="address" id="address">
+                    </div>
+                </div>
+                <div class="form-cell clearfix">
+                    <label for="" class="required">金额</label>
+                    <div class="form-cell-con" style="width:40%">
+                        <input type="text" placeholder="" required data-type="money" name="money" id="money">
+                    </div>
+                    <span style="font-size: 18px">元</span>
+                </div>
+                <div class="form-cell pay-cell clearfix">
+                    <label for="" class="required">付款</label>
+                    <input type="radio" required data-type="type" id="type" name="type">
+                    <span style="font-size: 18px">货到付款</span>
+                </div>
+                <div class="form-cell text-cell clearfix">
+                    <label for="">留言</label>
+                    <textarea name="remark" id="remark"></textarea>
+                </div>
+                <a href="javascript:;" class="btn">立即提交订单</a>
+            </form>
+        </div>
+        <span class="name"></span>
+    </div>
+   
+    <div class="warning"></div>
+    <script src="/content/xy/js/jquery-2.1.4.js"></script>
+    <script src="/content/xy/js/jquery-weui.js"></script>
+    <script src="/content/xy/js/jquery.form.min.js"></script>
+    <script src="/content/xy/js/city-picker.js"></script>
+    <script src="/content/xy/js/index.js"></script>
+
+    <script>
+
+    </script>
+</body>
+</html>
