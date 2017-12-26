@@ -105,8 +105,9 @@ $(function () {
                 }
             }
             var model = {};
-            model.productname = $("#trade").find("option:selected").text();  
-            model.productprice = $("#trade").val();
+
+            model.productname = $('input:radio[name="tc"]:checked').attr("t");  
+            model.productprice = $('input:radio[name="tc"]:checked').val();   
             model.username = $("#name").val();
             model.phone = $("#tel").val();
             model.area = $("#city-picker").val();
@@ -115,7 +116,7 @@ $(function () {
             model.remark = $("#remark").val();
             model.source = 1;
             model.count = $("#count").val();
-       
+             
             $.ajax({
                 url: '/OrderServiceX/CommitOrder/?rd=' + Math.random(),
                 type: "POST",

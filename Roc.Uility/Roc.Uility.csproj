@@ -106,6 +106,7 @@
     <Compile Include="Security\DESEncrypt.cs" />
     <Compile Include="Security\Md5.cs" />
     <Compile Include="Serialize.cs" />
+    <Compile Include="Source\SiteSource.cs" />
     <Compile Include="Validate\Validate.cs" />
     <Compile Include="VerifyCode.cs" />
     <Compile Include="Web\AjaxResult.cs" />
