@@ -148,7 +148,6 @@
     <Compile Include="Controllers\OrderServiceController.cs" />
     <Compile Include="Controllers\OrderServiceXController.cs" />
     <Compile Include="Controllers\p2Controller.cs" />
-    <Compile Include="Controllers\p1Controller.cs" />
     <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -728,7 +727,6 @@
     <Content Include="Areas\SystemManage\Views\Order\Details.cshtml" />
     <None Include="Properties\PublishProfiles\NFine.Framework.Release.pubxml" />
     <Content Include="Views\Test\Index.cshtml" />
-    <Content Include="Views\p1\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
