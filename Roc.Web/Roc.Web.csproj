@@ -147,7 +147,6 @@
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\OrderServiceController.cs" />
     <Compile Include="Controllers\OrderServiceXController.cs" />
-    <Compile Include="Controllers\p2Controller.cs" />
     <Compile Include="Controllers\p1Controller.cs" />
     <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Global.asax.cs">
@@ -478,7 +477,6 @@
     <Content Include="Content\xy\js\weui.min.css" />
     <Content Include="Global.asax" />
     <Content Include="Index.htm" />
-    <None Include="Views\p2\index.cshtml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
