@@ -477,6 +477,7 @@
     <Content Include="Content\xy\js\weui.min.css" />
     <Content Include="Global.asax" />
     <Content Include="Index.htm" />
+    <None Include="Views\p1\Fuall.cshtml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
