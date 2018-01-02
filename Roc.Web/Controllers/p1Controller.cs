@@ -17,6 +17,9 @@ namespace Roc.Web.Controllers
         {
             return View();
         }
-
+        public ActionResult Jz()
+        {
+            return View();
+        }
     }
 }
