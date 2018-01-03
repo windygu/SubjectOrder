@@ -21,5 +21,9 @@ namespace Roc.Web.Controllers
         {
             return View();
         }
+        public ActionResult fs()
+        {
+            return View();
+        }
     }
 }
