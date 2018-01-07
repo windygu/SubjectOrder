@@ -1,0 +1,180 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <script type="text/javascript" src="~/Content/zzx2/jquery-app.js"></script>
+    <title>赵忠祥老师书画作品受热捧</title>
+    <script>
+$(function (){
+	App.utils.delay = function (fn, t, ctx){
+	    return setTimeout($.proxy(fn, ctx), t);
+	}
+	App.create(function (){
+		var lazyLoadId;
+		function scrollTop(){
+		    return Math.max($('html').scrollTop(), $('body').scrollTop());
+		}
+	    return {
+			el: '#activity-detail',
+			elements: {
+				win: window,
+				imgs: '*#page-content img'
+			},
+			directives:{
+			    initHeight: {
+					bind: function (el, binding){
+						var w = $(window).innerWidth();
+						el.each(function (){
+						    var ratio = parseFloat(this.getAttribute(binding.bindName));
+							if (ratio) {
+								this.height = w*ratio;
+							}
+							$(this).parent().addClass('loading-bg');
+						});
+					}
+				}
+			},
+			render: {
+				imgs: {
+				   initHeight: 'data-ratio'
+				},
+				win: {
+					'@scroll': function (){
+						clearTimeout(lazyLoadId);
+						lazyLoadId = App.utils.delay(function (){
+							this.set('scrollTop', scrollTop());
+						}, 200, this);
+					}
+				}
+			},
+			watch: {
+				scrollTop: function (top){
+					var height = $(window).innerHeight();
+					this.element('imgs').each(function (){
+						var rect = this.getClientRects()[0];
+						if (rect.bottom < 0 || rect.top > height) {
+							return;
+						}
+						if (this.src.indexOf('data') !== 0) {
+							return;
+						}
+						this.onload = function (){
+						    $(this).fadeTo('fast', 1);
+							$(this).parent().removeClass('loading-bg')
+						}
+						App.utils.delay(function (){
+						    this.src = this.getAttribute('data-src');
+						}, 400*Math.random(), this);
+						$(this).css('opacity', 0);
+						App.utils.delay(function (){
+						    $(this).css('opacity', 1);
+							$(this).parent().removeClass('loading-bg');
+						}, 1000, this);
+					});
+				}
+			}
+		}
+	});
+});
+    </script>
+    <style>
+        body {
+            font-family: -apple-system-font,"Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            line-height: 1.2;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .profile_inner {
+            padding-bottom: 15px;
+        }
+
+        .rich_media {
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        .rich_media_title {
+            margin-bottom: 10px;
+            line-height: 1.4;
+            font-weight: 400;
+            font-size: 24px;
+        }
+
+        .rich_media_area_primary {
+            position: relative;
+            padding: 20px 15px 15px;
+            background-color: #fff;
+        }
+
+        .rich_media_content p {
+            clear: both;
+            min-height: 1em;
+            margin-bottom: 15px;
+        }
+
+        .infox {
+            padding-left: 30px;
+        }
+
+        .sub-title {
+            color: #aaa;
+        }
+
+        #js_profile_qrcode {
+            margin-top: 36px;
+        }
+
+        .loading-bg {
+            background: #f7f7f7 url(images/loading.gif) no-repeat 50% 50%;
+        }
+    </style>
+</head>
+<body id="activity-detail" class="zh_CN mm_appmsg rich_media_empty_extra not_in_mm">
+    <div id="js_article" class="rich_media">
+        <div id="js_top_ad_area" class="top_banner"></div>
+        <div class="rich_media_inner">
+            <div id="page-content" class="rich_media_area_primary">
+                <div id="img-content">
+                    <h2 class="rich_media_title" id="activity-name">
+                        赵忠祥老师书画作品受热捧
+                    </h2>
+                    <div id="meta_content" class="rich_media_meta_list">
+                        <div class="sub-title">
+                            <span id="post-date" class="rich_media_meta rich_media_meta_text">2018-01-01</span>
+                            <span class="rich_media_meta rich_media_meta_text">陈思汉</span>
+                        </div>
+                        <div id="js_profile_qrcode" class="profile_container">
+                            <div class="profile_inner">
+                                <p class="profile_meta">
+                                    <label class="profile_meta_label">功能介绍: </label>
+                                    <span class="profile_meta_value">致力于对书画家书法、绘画等作品进行推广、传播、交流、分享。弘扬社会正气，凝聚正能量，共同构建营造和谐健康的社会环境而努力。</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rich_media_content " id="js_content">
+                        <p>书画市场持续低迷，一部分实力派书画艺术家，渐渐浮出水面，并受到社会各界的热捧。这些人具有社会影响力大，书画根基深厚，知名书画名家对其艺术作品认同度高，作品价位与市场贴近，不虚高，将来有较强升值空间。赵忠祥老师便是这样一位代表人物。<br></p><ol class="infox"><li><p>论知名度,全国人民家喻户晓.</p></li><li><p>论书画根基,自幼热爱书画,并师承著名书画家黄胄先生。</p></li><li><p>论书画界名人对其认同，有范曾先生多次与他合作作品，著名画家史国良也多次与其合作画作。</p></li><li><p>论作品价位更是很接地气，从几千到几万元不等，大众百姓均能消费的起。</p></li></ol><ul class="info"><li><p><img data-s="300,640" data-type="jpeg" data-src="images/1.webp" data-copyright="0" class="" data-ratio="1.3333333333333333" data-w="864" src="images/1.webp" data-fail="0"></p><p>赵忠祥老师在写福字</p><p><img data-s="300,640" data-type="jpeg" data-src="images/2.webp" data-copyright="0" class="" data-ratio="1.3333333333333333" data-w="864" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" data-fail="0"></p><p>赵忠祥老师在写诚信书法</p><p><img data-s="300,640" data-type="jpeg" data-src="images/3.webp" data-copyright="0" class="" data-ratio="1.3333333333333333" data-w="864" src="http://mmbiz.qpic.cn/mmbiz_jpg/KysibswicPgAtjhl2DgCMX0YXAlOaicwKuEEFhGQicdj8JcuhXQPghuicIEXvWz9VwGK0p9I3B6iaQ9l3PoIfWlbwErA/640?wx_fmt=jpeg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1" data-fail="0"></p><p>赵忠祥老师在创作福寿康宁</p><p>&nbsp;</p><p><img data-s="300,640" data-type="jpeg" data-src="images/4.webp" data-copyright="0" class="" data-ratio="1" data-w="358" src="http://mmbiz.qpic.cn/mmbiz_jpg/KysibswicPgAtjhl2DgCMX0YXAlOaicwKuEUgHj6d3ftVpZkicrgLpia3bqxKOUYPaGe8rIGtXvGgzLcMt1bZ8iccWZw/640?wx_fmt=jpeg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1" data-fail="0"></p><p>范曾先生与赵忠祥老师一起创作作品</p><p><img data-s="300,640" data-type="jpeg" data-src="images/5.jpg" data-copyright="0" class="img_loading" data-ratio="1.8993055555555556" data-w="864" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="></p><p>史国良老师与赵忠祥老师一起创作作品</p><p><img data-s="300,640" data-type="jpeg" data-src="images/6.jpg" data-copyright="0" class="img_loading" data-ratio="1.3333333333333333" data-w="768" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="></p><p>赵忠祥老师作品登上春晚现场</p><p><img data-s="300,640" data-type="jpeg" data-src="images/7.jpg" data-copyright="0" class="img_loading" data-ratio="0.56328125" data-w="1280" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="></p><p><img data-s="300,640" data-type="jpeg" data-src="images/8.jpg" data-copyright="0" class="img_loading" data-ratio="0.5625" data-w="768" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="></p><p>赵忠祥老师为企业题写匾额</p><p><img data-s="300,640" data-type="jpeg" data-src="images/9.jpg" data-copyright="0" class="img_loading" data-ratio="0.5625" data-w="768" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="></p><p>赵忠祥老师为企业题写匾额</p><p><img data-s="300,640" data-type="jpeg" data-src="images/10.jpg" data-copyright="0" class="img_loading" data-ratio="0.5625" data-w="768" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="></p><p>书画爱好者收藏赵忠祥老师作品</p><p><img data-s="300,640" data-type="jpeg" data-src="images/11.jpg" data-copyright="0" class="img_loading" data-ratio="0.5625" data-w="768" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="></p><p>书画爱好者收藏赵忠祥老师作品</p><p><img data-s="300,640" data-type="jpeg" data-src="images/12.jpg" data-copyright="0" class="img_loading" data-ratio="0.5625" data-w="768" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="></p><p>书画爱好者收藏赵忠祥老师作品<br></p><p><img data-s="300,640" data-type="jpeg" data-src="images/13.jpg" data-copyright="0" class="img_loading" data-ratio="0.5625" data-w="768" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="></p><p>书画爱好者收藏赵忠祥老师作品</p><p><img data-s="300,640" data-type="jpeg" data-src="images/14.jpg" data-copyright="0" class="img_loading" data-ratio="0.5625" data-w="768" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="></p></li></ul><p>&nbsp; &nbsp; &nbsp;书画爱好者收藏赵忠祥老师作品</p><p><img data-s="300,640" data-type="jpeg" data-src="images/15.jpg" data-copyright="0" class="img_loading" data-ratio="0.25625" data-w="640" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="></p><p>赵忠祥老师书法作品</p><p><img data-s="300,640" data-type="jpeg" data-src="images/16.jpg" data-copyright="0" class="img_loading" data-ratio="0.265625" data-w="640" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="></p><p>赵忠祥老师书法作品</p><p><img data-s="300,640" data-type="jpeg" data-src="images/17.jpg" data-copyright="0" class="img_loading" data-ratio="0.24375" data-w="640" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="><br></p><p>赵忠祥老师书法作品</p><p><img data-s="300,640" data-type="jpeg" data-src="images/17.webp" data-copyright="0" class="img_loading" data-ratio="0.2515625" data-w="640" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="></p><p>赵忠祥老师书法作品</p><p><img data-s="300,640" data-type="jpeg" data-src="images/18.jpg" data-copyright="0" class="img_loading" data-ratio="0.9953125" data-w="640" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="></p><p>赵忠祥老师书法作品</p><p><img data-s="300,640" data-type="jpeg" data-src="images/19.jpg" data-copyright="0" class="img_loading" data-ratio="0.5847058823529412" data-w="850" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="></p><p>赵忠祥老师毛驴作品</p><p><img data-s="300,640" data-type="jpeg" data-src="images/20.jpg" data-copyright="0" class="img_loading" data-ratio="1.1347517730496455" data-w="705" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="></p><p>赵忠祥老师毛驴作品</p><p><img data-s="300,640" data-type="jpeg" data-src="images/21.webp" data-copyright="0" class="img_loading" data-ratio="0.9818181818181818" data-w="1100" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="></p><p>赵忠祥老师毛驴人物作品</p><p><img data-s="300,640" data-type="jpeg" data-src="images/22.jpg" data-copyright="0" class="img_loading" data-ratio="1.6666666666666667" data-w="768" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="></p><p>赵忠祥老师大吉祥作品</p><p><img data-s="300,640" data-type="jpeg" data-src="images/23.jpg" data-copyright="0" class="img_loading" data-ratio="0.75" data-w="1280" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="></p><p>赵忠祥在紫砂壶上的书法作品</p><p><img data-s="300,640" data-type="jpeg" data-src="images/24.jpg" data-copyright="0" class="img_loading" data-ratio="0.7551622418879056" data-w="678" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="></p><p>众多书画爱好者在老赵会客厅与赵老师见面<br></p><p><img data-s="300,640" data-type="jpeg" data-src="images/25.jpg" data-copyright="0" class="img_loading" data-ratio="0.75" data-w="720" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="></p><p>赵忠祥老师现场作画被围观场景<br></p><p><img data-s="300,640" data-type="jpeg" data-src="images/26.jpg" data-copyright="0" class="img_loading" data-ratio="0.75" data-w="720" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="></p><p>赵忠祥老师现场作画被围观场景</p><p><img data-s="300,640" data-type="jpeg" data-src="images/27.jpg" data-copyright="0" class="img_loading" data-ratio="0.5637254901960784" data-w="816" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="></p><p>众多书画爱好者喜爱赵老师的福字<br></p><p><img data-s="300,640" data-type="jpeg" data-src="images/28.jpg" data-copyright="0" class="img_loading" data-ratio="0.5637254901960784" data-w="816" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="></p><p>书画爱好者收藏赵老师福字。</p><p><img data-s="300,640" data-type="png" data-src="images/wx.jpg" data-copyright="0" class="img_loading" data-ratio="0.4718181818181818" data-w="879" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="></p><p>若需要收藏赵忠祥老师书画作品请加上面微信<br></p>
+                    </div>
+</body>
+</html>
