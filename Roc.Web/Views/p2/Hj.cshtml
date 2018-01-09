@@ -1,0 +1,135 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = null;
+}
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+	<title>德比斯红葡萄酒</title>
+</head>
+<style>
+body,html{margin:0;padding:0;line-height:1.5;font-size:15px;}
+*{box-sizing:border-box;}
+img{border:none;width:100%;display:block;}
+.loading-bg{background:#f7f7f7 url(/content/hjimages/loading.gif) no-repeat 50% 50%;overflow:hidden;}
+table{border-collapse:collapse;width:100%;margin:15px 0;}
+td{padding:10px;vertical-align:top;font-size:18px;}
+td strong{color:red;display:inline-block;vertical-align:middle;padding-right:4px;}
+td:first-child{text-align:right;padding-left:0;padding-right:0;line-height:24px;padding-top:15px;}
+.bg-red{background:red;color:#fff;}
+input, textarea{width:100%;line-height:18px;padding:5px;padding-bottom:10px;border:1px solid #C6C6C6;border-radius: 4px;outline:none;}
+input:focus, textarea:focus{border-color:#33ccff}
+textarea{height:100px;}
+.sale-type span{
+	padding:5px;
+	display:inline-block;
+	border-radius: 4px;
+	margin-bottom:5px;
+	border:1px solid #C6C6C6;
+	color:#666;
+}
+.sale-type span.selected{
+	background:red;color:#fff;
+	border:1px solid red;
+}
+.add-minus span, .add-minus input{display:inline-block;line-height:20px;padding:5px;vertical-align:middle;text-align:center;}
+.add-minus span{border:1px solid #ddd;background:#eee;color:red;width:30px;}
+.add-minus input{border-radius:0;width:60px;border-width:1px 0;}
+.price{font-size:18px;color:red;padding-top:2px;display:inline-block;}
+.pt5{display:inline-block;position:relative; top:2px}
+.btmsg{border:1px solid #EBD3D3;background:#FCEFDF;border-radius: 4px;padding:15px;margin-top:10px;color:#B70100;}
+.wapper{margin:0 auto;max-width:750px;}
+</style>
+<body>
+    <div class="wapper">
+
+ 
+        <section><img src="/content/hjimages/empty.png" data-ratio="0.34" data-src="/content/hjimages/dbshj_01.jpg"></section>
+        <section><img src="/content/hjimages/empty.png" data-ratio="1.2666666666666666" data-src="/content/hjimages/dbshj_02.jpg"></section>
+        <section><img src="/content/hjimages/empty.png" data-ratio="0.5173333333333333" data-src="/content/hjimages/dbshj_03.jpg"></section>
+        <section><img src="/content/hjimages/empty.png" data-ratio="1.4379172229639519" data-src="/content/hjimages/dbshj_06.jpg"></section>
+        <section class="js-gotoform"><img src="/content/hjimages/dbshj_07.jpg" data-ratio="0.304" data-src="/content/hjimages/dbshj_07.jpg"></section>
+        <section><img src="/content/hjimages/empty.png" data-ratio="1.2906666666666666" data-src="/content/hjimages/dbshj_08.jpg"></section>
+        <section><img src="/content/hjimages/empty.png" data-ratio="0.7333333333333333" data-src="/content/hjimages/dbshj_09.jpg"></section>
+        <section><img src="/content/hjimages/empty.png" data-ratio="0.6546666666666666" data-src="/content/hjimages/dbshj_10.jpg"></section>
+        <section><img src="/content/hjimages/empty.png" data-ratio="1.7543391188251" data-src="/content/hjimages/dbshj_12.jpg"></section>
+        <section><img src="/content/hjimages/empty.png" data-ratio="0.8053333333333333" data-src="/content/hjimages/dbshj_13.jpg"></section>
+        <section><img src="/content/hjimages/empty.png" data-ratio="0.46862483311081443" data-src="/content/hjimages/dbshj_15.jpg"></section>
+        <section><img src="/content/hjimages/empty.png" data-ratio="0.4706666666666667" data-src="/content/hjimages/dbshj_16.jpg"></section>
+        <section><img src="/content/hjimages/empty.png" data-ratio="0.5153538050734312" data-src="/content/hjimages/dbshj_18.jpg"></section>
+        <section><img src="/content/hjimages/empty.png" data-ratio="0.404" data-src="/content/hjimages/dbshj_20.jpg"></section>
+        <section><img src="/content/hjimages/empty.png" data-ratio="1.104" data-src="/content/hjimages/dbshj_21.jpg"></section>
+        <section><img src="/content/hjimages/empty.png" data-ratio="0.7346666666666667" data-src="/content/hjimages/dbshj_23.jpg"></section>
+        <section><img src="/content/hjimages/empty.png" data-ratio="0.5026666666666667" data-src="/content/hjimages/dbshj_24.jpg"></section>
+        <section><img src="/content/hjimages/empty.png" data-ratio="0.54" data-src="/content/hjimages/dbshj_25.jpg"></section>
+        <section><img src="/content/hjimages/empty.png" data-ratio="0.956" data-src="/content/hjimages/dbshj_27.jpg"></section>
+        <section><img src="/content/hjimages/empty.png" data-ratio="1.1388518024032044" data-src="/content/hjimages/dbshj_29.jpg"></section>
+        <section><img src="/content/hjimages/dbshj_31.jpg" data-ratio="0.088" data-src="/content/hjimages/dbshj_31.jpg"></section>
+        <div class="js-form">
+            <form action="#">
+                <table>
+                    <colgroup>
+                        <col width="25%">
+                        <col width="75%">
+                    </colgroup>
+                    <tr>
+                        <td><strong>*</strong>套餐选择</td>
+                        <td class="sale-type">
+                            <div>
+                                <span class="selected" data-type="1" data-price="268">买1支送1支268元(2支)</span>
+                            </div>
+                            <div>
+                                <span data-type="2" data-price="728">买3支送3支728元(6支)</span>
+                            </div>
+                            <div>
+                                <span data-type="3" data-price="1188">买1箱送1箱1188元(12支)</span>
+                            </div>
+                            <input type="hidden" name="saletype">
+                        </td>
+                    </tr>
+                    <tr class="add-minus">
+                        <td><strong>*</strong>定单数量</td>
+                        <td><span>-</span><input type="text" value="1"><span>+</span></td>
+                    </tr>
+                    <tr>
+                        <td>定单价格</td>
+                        <td><strong class="price">268.00</strong><span class="pt5">元</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>*</strong>收货人名</td>
+                        <td><input class="js-input" name="username" type="text" placeholder="请输入您的姓名或称呼"></td>
+                    </tr>
+                    <tr>
+                        <td><strong>*</strong>手机号码</td>
+                        <td><input class="js-input" name="phone" type="text" placeholder="请输入您的手机号码"></td>
+                    </tr>
+                    <tr>
+                        <td><strong>*</strong>选择地区</td>
+                        <td><input class="js-input" name="area" type="text" placeholder="请输入您的姓名或称呼"></td>
+                    </tr>
+                    <tr>
+                        <td><strong>*</strong>详细地址</td>
+                        <td><textarea class="js-input" name="addess" placeholder="请填写您的详细地址"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td>留言备注</td>
+                        <td><textarea class="js-input" name="msg" data-noneed="1" placeholder="如备用电话、商品数量、收货时间等，有额外需求请留言"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td><strong>*</strong>支付方式</td>
+                        <td>
+                            <div><img src="/content/hjimages/paytype.jpg" style="width:50%"></div>
+                            <div class="btmsg">选择货到付款，安全放心</div>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <section class="js-submit"><img src="/content/hjimages/dbshj_35.jpg" data-ratio="0.23466666666666666" data-src="/content/hjimages/dbshj_35.jpg"></section>
+    </div>
+</body>
+<script type="text/javascript" src="/content/jsstorage/jquery.app.js"></script>
+<script type="text/javascript" src="/content/jsstorage/app.js"></script>
+</html>

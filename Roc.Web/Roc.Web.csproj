@@ -157,6 +157,35 @@
   <ItemGroup>
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Content Include="Content\hjimages\dbshj_01.jpg" />
+    <Content Include="Content\hjimages\dbshj_02.jpg" />
+    <Content Include="Content\hjimages\dbshj_03.jpg" />
+    <Content Include="Content\hjimages\dbshj_06.jpg" />
+    <Content Include="Content\hjimages\dbshj_06.png" />
+    <Content Include="Content\hjimages\dbshj_07.jpg" />
+    <Content Include="Content\hjimages\dbshj_08.jpg" />
+    <Content Include="Content\hjimages\dbshj_09.jpg" />
+    <Content Include="Content\hjimages\dbshj_10.jpg" />
+    <Content Include="Content\hjimages\dbshj_12.jpg" />
+    <Content Include="Content\hjimages\dbshj_13.jpg" />
+    <Content Include="Content\hjimages\dbshj_15.jpg" />
+    <Content Include="Content\hjimages\dbshj_16.jpg" />
+    <Content Include="Content\hjimages\dbshj_18.jpg" />
+    <Content Include="Content\hjimages\dbshj_20.jpg" />
+    <Content Include="Content\hjimages\dbshj_21.jpg" />
+    <Content Include="Content\hjimages\dbshj_23.jpg" />
+    <Content Include="Content\hjimages\dbshj_24.jpg" />
+    <Content Include="Content\hjimages\dbshj_25.jpg" />
+    <Content Include="Content\hjimages\dbshj_27.jpg" />
+    <Content Include="Content\hjimages\dbshj_29.jpg" />
+    <Content Include="Content\hjimages\dbshj_31.jpg" />
+    <Content Include="Content\hjimages\dbshj_33.jpg" />
+    <Content Include="Content\hjimages\dbshj_35.jpg" />
+    <Content Include="Content\hjimages\empty.png" />
+    <Content Include="Content\hjimages\loading.gif" />
+    <Content Include="Content\hjimages\paytype.jpg" />
+    <Content Include="Content\jsstorage\app.js" />
+    <Content Include="Content\jsstorage\jquery.app.js" />
     <Content Include="Content\zzx\1.jpg" />
     <Content Include="Content\zzx\10.jpg" />
     <Content Include="Content\zzx\11.jpg" />
@@ -478,6 +507,7 @@
     <Content Include="Global.asax" />
     <Content Include="Index.htm" />
     <None Include="Views\p2\index.cshtml" />
+    <None Include="Views\p2\Hj.cshtml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
