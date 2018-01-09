@@ -1,0 +1,53 @@
+.layout-container-table {
+    width: 100%;
+    position: relative;
+    display: table;
+}
+
+.layout-container {
+    width: 100%;
+    position: relative;
+}
+
+.clearfix:after{
+    content:".";
+    display:block;
+    height:0;
+    clear:both;
+    visibility:hidden;
+}
+.clearfix{
+    *+height:1%;
+}
+
+.left {
+    float: left;
+}
+
+.cell {
+    display: table-cell;
+    vertical-align: top;
+}
+
+.fixed-left, .inner-left {
+    float: left;
+}
+
+.fixed-right, .inner-right {
+    float: right;
+}
+.fixed-center {
+    margin: 0 auto;
+}
+.fixed-center, .fixed-right, .fixed-left {
+    max-width: 100%;
+    z-index: 9;
+}
+
+.inner-wrapper {
+    width: 100%;
+}
+
+.inner-wrapper-half {
+    flex: 1;
+}
