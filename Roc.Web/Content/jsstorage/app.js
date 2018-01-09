@@ -87,7 +87,8 @@ App.create({
 	data: {
         count: 1,
         type: 1,
-        price: 268
+        price: 268,
+        productname:'买1支送1支268元(2支)'
     },
 
     willSet: {
@@ -115,7 +116,15 @@ App.create({
                     all.removeClass('selected');
                     $(this).addClass('selected');
                     self.set('type', this.getAttribute('data-type'));
-                    self.set('price', this.getAttribute('data-price'));
+                    self.set('price', this.getAttribute('data-price') * self.get('count'));
+                    self.set('productname', this.getAttribute('data-name'));
+
+                    if (self.get('type') == 1) {
+                        document.getElementById("saleprice").value = 268;
+                    }
+                    else {
+                        document.getElementById("saleprice").value = this.getAttribute('data-price');
+                    }
                 });
             }
         },
@@ -133,6 +142,13 @@ App.create({
                     var count = self.get('count');
                     var add = this.innerHTML == '+';
                     self.set('count', count + (add ? 1 : -1));
+                    var _price = 0;
+                    if (document.getElementById("saleprice").value == 1) {
+                        _price = 268;
+                        self.set('price', self.get('count') * _price);
+                    } else {
+                        self.set('price', self.get('count') * document.getElementById("saleprice").value);
+                    }
                 });
             }
         },
@@ -142,6 +158,8 @@ App.create({
                 var val = parseInt(this.element(e).val()) || '';
                 this.set('count', val);
                 this.element(e).val(this.get('count'));
+
+      
             },
             'val': 'count'
         },
@@ -157,9 +175,45 @@ App.create({
                     var need = this.getAttribute('data-noneed') != '1';
 
                     if (this.value == '' && need) {
-                        alert(this.getAttribute('placeholder'));
+                        //alert(this.getAttribute('placeholder'));
+                        //信息框
+                        layer.open({
+                            content: this.getAttribute('placeholder')
+                            , btn: '我知道了'
+                        });
                         this.focus();
                         return false;
+                    }
+
+                    
+                });
+                var a = JSON.stringify(this.data);
+                var formdata = JSON.parse(a);
+                var model = {};
+
+                model.productname = formdata.productname;
+                model.productprice = formdata.price;
+                model.username = formdata.username;
+                model.phone = formdata.phone;
+                model.area = formdata.area;
+                model.address = formdata.addess;
+                model.paytype = 1;
+                model.remark = formdata.msg;
+                model.source = 1;
+                model.count = formdata.count;
+
+                $.ajax({
+                    url: '/OrderServiceX/CommitOrder/?rd=' + Math.random(),
+                    type: "POST",
+                    data: JSON.stringify(model),
+                    contentType: "application/json; charset=utf-8",
+                    dataType: 'JSON',
+                    success: function (result) {
+                        $('#buyForm')[0].reset()
+                        layer.open({
+                            content: result.message
+                            , btn: '我知道了'
+                        });
                     }
                 });
             }

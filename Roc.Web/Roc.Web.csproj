@@ -186,6 +186,8 @@
     <Content Include="Content\hjimages\paytype.jpg" />
     <Content Include="Content\jsstorage\app.js" />
     <Content Include="Content\jsstorage\jquery.app.js" />
+    <Content Include="Content\jsstorage\layer_mobile\layer.js" />
+    <Content Include="Content\jsstorage\layer_mobile\need\layer.css" />
     <Content Include="Content\zzx\1.jpg" />
     <Content Include="Content\zzx\10.jpg" />
     <Content Include="Content\zzx\11.jpg" />
