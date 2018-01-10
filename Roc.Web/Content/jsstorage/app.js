@@ -14,7 +14,7 @@ App.directive({
         },
 
         update: function (el, binding, self){
-            var height = $(window).innerHeight();
+            var height = $(window).innerHeight()*2;
 
             this.element(el).each(function (){
                 var rect = this.getClientRects()[0];
@@ -35,7 +35,7 @@ App.directive({
 
                     $(this).css('opacity', 0);
                     next();
-                }).delay(50*Math.random(), 'lazy').queue('lazy', function (next){
+                }).queue('lazy', function (next){
                     this.src = dataSrc;
                     next();
                 }).delay(1000, 'lazy').queue('lazy', function (){
@@ -164,7 +164,7 @@ App.create({
             'val': 'count'
         },
 
-        '.price': 'price | {{$}}.00',
+        '.price': 'price | `{{$}}.00`',
 
         '*.js-submit': {
             'on:click': function (){
