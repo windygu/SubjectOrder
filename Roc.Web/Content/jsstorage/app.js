@@ -195,13 +195,14 @@ App.create({
                 model.productprice = formdata.price;
                 model.username = formdata.username;
                 model.phone = formdata.phone;
-                model.area = formdata.area;
+                model.area = $("#city-picker").val();
                 model.address = formdata.addess;
                 model.paytype = 1;
                 model.remark = formdata.msg;
                 model.source = 1;
                 model.count = formdata.count;
 
+                //alert(JSON.stringify(model));
                 $.ajax({
                     url: '/OrderServiceX/CommitOrder/?rd=' + Math.random(),
                     type: "POST",
