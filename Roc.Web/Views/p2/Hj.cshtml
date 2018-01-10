@@ -31,9 +31,14 @@
             display: block;
         }
 
+        section {
+            transition: transform 0.6s
+        }
+
         .loading-bg {
-            background: #f7f7f7 url(/content/hjimages/loading.gif) no-repeat 50% 50%;
+            background: #f7f7f7 url(/Content/hjimages/loading.gif) no-repeat 50% 50%;
             overflow: hidden;
+            transform: translateY(-10px);
         }
 
         table {
@@ -144,106 +149,97 @@
             color: #B70100;
         }
 
-        .wapper {
+        .wrapper {
             margin: 0 auto;
             max-width: 750px;
         }
     </style>
+    <body>
+        <div class="wrapper">
+            <section><img src="/Content/hjimages/hj_01.jpg" data-ratio="0.344" data-src="/Content/hjimages/hj_01.jpg"></section>
+            <section><img src="/Content/hjimages/hj_02.jpg" data-ratio="1.428" data-src="/Content/hjimages/hj_02.jpg"></section>
+            <section><img src="/Content/hjimages/hj_03.jpg" data-ratio="1.504" data-src="/Content/hjimages/hj_03.jpg"></section>
+            <section class="js-gotoform"><img src="/Content/hjimages/hj_04.jpg" data-ratio="0.452" data-src="/Content/hjimages/hj_04.jpg"></section>
+            <section><img src="/Content/hjimages/empty.png" data-ratio="1.296" data-src="/Content/hjimages/hj_05.jpg"></section>
+            <section><img src="/Content/hjimages/empty.png" data-ratio="1.3866666666666667" data-src="/Content/hjimages/hj_06.jpg"></section>
+            <section><img src="/Content/hjimages/empty.png" data-ratio="0.684" data-src="/Content/hjimages/hj_07.jpg"></section>
+            <section><img src="/Content/hjimages/empty.png" data-ratio="0.7213333333333334" data-src="/Content/hjimages/hj_08.jpg"></section>
+            <section><img src="/Content/hjimages/empty.png" data-ratio="0.49466666666666664" data-src="/Content/hjimages/hj_09.jpg"></section>
+            <section><img src="/Content/hjimages/empty.png" data-ratio="1.712" data-src="/Content/hjimages/hj_10.jpg"></section>
+            <section><img src="/Content/hjimages/empty.png" data-ratio="1.8613333333333333" data-src="/Content/hjimages/hj_11.jpg"></section>
+            <section><img src="/Content/hjimages/empty.png" data-ratio="1.3586666666666667" data-src="/Content/hjimages/hj_12.jpg"></section>
+            <section><img src="/Content/hjimages/empty.png" data-ratio="1.1253333333333333" data-src="/Content/hjimages/hj_13.jpg"></section>
+            <section><img src="/Content/hjimages/empty.png" data-ratio="0.7613333333333333" data-src="/Content/hjimages/hj_14.jpg"></section>
+            <section><img src="/Content/hjimages/empty.png" data-ratio="0.964" data-src="/Content/hjimages/hj_15.jpg"></section>
+            <section><img src="/Content/hjimages/empty.png" data-ratio="0.544" data-src="/Content/hjimages/hj_16.jpg"></section>
+            <section><img src="/Content/hjimages/empty.png" data-ratio="0.9626666666666667" data-src="/Content/hjimages/hj_17.jpg"></section>
+            <section><img src="/Content/hjimages/empty.png" data-ratio="1.136" data-src="/Content/hjimages/hj_18.jpg"></section>
+            <section><img src="/Content/hjimages/hj_19.jpg" data-ratio="0.088" data-src="/Content/hjimages/hj_19.jpg"></section>
+            <div class="js-form">
+                <form action="#" id="buyForm">
+                    <table>
+                        <colgroup>
+                            <col width="25%">
+                            <col width="75%">
+                        </colgroup>
+                        <tr>
+                            <td><strong>*</strong>套餐选择</td>
+                            <td class="sale-type">
+                                <div>
+                                    <span class="selected" data-type="1" data-price="268" data-name="买1支送1支268元(2支)">买1支送1支268元(2支)</span>
+                                </div>
+                                <div>
+                                    <span data-type="2" data-price="728" data-name="买3支送3支728元(6支)">买3支送3支728元(6支)</span>
+                                </div>
+                                <div>
+                                    <span data-type="3" data-price="1188" data-name="买1箱送1箱1188元(12支)">买1箱送1箱1188元(12支)</span>
+                                </div>
+                                <input type="hidden" name="saletype">
+                                <input type="hidden" name="saleprice" id="saleprice">
+                            </td>
+                        </tr>
+                        <tr class="add-minus">
+                            <td><strong>*</strong>定单数量</td>
+                            <td><span>-</span><input type="text" value="1" id="txtcount"><span>+</span></td>
+                        </tr>
+                        <tr>
+                            <td>定单价格</td>
+                            <td><strong class="price">268.00</strong><span class="pt5">元</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>*</strong>收货人名</td>
+                            <td><input class="js-input" name="username" type="text" placeholder="请输入您的姓名或称呼"></td>
+                        </tr>
+                        <tr>
+                            <td><strong>*</strong>手机号码</td>
+                            <td><input class="js-input" name="phone" type="text" placeholder="请输入您的手机号码"></td>
+                        </tr>
+                        <tr>
+                            <td><strong>*</strong>选择地区</td>
+                            <td><input class="js-input" name="area" type="text" placeholder="请输入您的所在地区"></td>
+                        </tr>
+                        <tr>
+                            <td><strong>*</strong>详细地址</td>
+                            <td><textarea class="js-input" name="addess" placeholder="请填写您的详细地址"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td>留言备注</td>
+                            <td><textarea class="js-input" name="msg" data-noneed="1" placeholder="如备用电话、商品数量、收货时间等，有额外需求请留言"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td><strong>*</strong>支付方式</td>
+                            <td>
+                                <div><img src="/Content/hjimages/paytype.jpg" style="width:50%"></div>
+                                <div class="btmsg">选择货到付款，安全放心</div>
+                            </td>
+                        </tr>
+                    </table>
 
-</head>
+                </form>
 
-<body>
-     
-    <div class="wapper">
-
-
-        <section><img src="/content/hjimages/empty.png" data-ratio="0.34" data-src="/content/hjimages/dbshj_01.jpg"></section>
-        <section><img src="/content/hjimages/empty.png" data-ratio="1.2666666666666666" data-src="/content/hjimages/dbshj_02.jpg"></section>
-        <section><img src="/content/hjimages/empty.png" data-ratio="0.5173333333333333" data-src="/content/hjimages/dbshj_03.jpg"></section>
-        <section><img src="/content/hjimages/empty.png" data-ratio="1.4379172229639519" data-src="/content/hjimages/dbshj_06.jpg"></section>
-        <section class="js-gotoform"><img src="/content/hjimages/dbshj_07.jpg" data-ratio="0.304" data-src="/content/hjimages/dbshj_07.jpg"></section>
-        <section><img src="/content/hjimages/empty.png" data-ratio="1.2906666666666666" data-src="/content/hjimages/dbshj_08.jpg"></section>
-        <section><img src="/content/hjimages/empty.png" data-ratio="0.7333333333333333" data-src="/content/hjimages/dbshj_09.jpg"></section>
-        <section><img src="/content/hjimages/empty.png" data-ratio="0.6546666666666666" data-src="/content/hjimages/dbshj_10.jpg"></section>
-        <section><img src="/content/hjimages/empty.png" data-ratio="1.7543391188251" data-src="/content/hjimages/dbshj_12.jpg"></section>
-        <section><img src="/content/hjimages/empty.png" data-ratio="0.8053333333333333" data-src="/content/hjimages/dbshj_13.jpg"></section>
-        <section><img src="/content/hjimages/empty.png" data-ratio="0.46862483311081443" data-src="/content/hjimages/dbshj_15.jpg"></section>
-        <section><img src="/content/hjimages/empty.png" data-ratio="0.4706666666666667" data-src="/content/hjimages/dbshj_16.jpg"></section>
-        <section><img src="/content/hjimages/empty.png" data-ratio="0.5153538050734312" data-src="/content/hjimages/dbshj_18.jpg"></section>
-        <section><img src="/content/hjimages/empty.png" data-ratio="0.404" data-src="/content/hjimages/dbshj_20.jpg"></section>
-        <section><img src="/content/hjimages/empty.png" data-ratio="1.104" data-src="/content/hjimages/dbshj_21.jpg"></section>
-        <section><img src="/content/hjimages/empty.png" data-ratio="0.7346666666666667" data-src="/content/hjimages/dbshj_23.jpg"></section>
-        <section><img src="/content/hjimages/empty.png" data-ratio="0.5026666666666667" data-src="/content/hjimages/dbshj_24.jpg"></section>
-        <section><img src="/content/hjimages/empty.png" data-ratio="0.54" data-src="/content/hjimages/dbshj_25.jpg"></section>
-        <section><img src="/content/hjimages/empty.png" data-ratio="0.956" data-src="/content/hjimages/dbshj_27.jpg"></section>
-        <section><img src="/content/hjimages/empty.png" data-ratio="1.1388518024032044" data-src="/content/hjimages/dbshj_29.jpg"></section>
-        <section><img src="/content/hjimages/dbshj_31.jpg" data-ratio="0.088" data-src="/content/hjimages/dbshj_31.jpg"></section>
-        <div class="js-form">
-            <form action="#" id="buyForm">
-                <table>
-                    <colgroup>
-                        <col width="25%">
-                        <col width="75%">
-                    </colgroup>
-                    <tr>
-                        <td><strong>*</strong>套餐选择</td>
-                        <td class="sale-type">
-                            <div>
-                                <span class="selected" data-type="1" data-price="268" data-name="买1支送1支268元(2支)">买1支送1支268元(2支)</span>
-                            </div>
-                            <div>
-                                <span data-type="2" data-price="728" data-name="买3支送3支728元(6支)">买3支送3支728元(6支)</span>
-                            </div>
-                            <div>
-                                <span data-type="3" data-price="1188"  data-name="买1箱送1箱1188元(12支)">买1箱送1箱1188元(12支)</span>
-                            </div>
-                            <input type="hidden" name="saletype">
-                            <input type="hidden" name="saleprice" id="saleprice">
-                        </td>
-                    </tr>
-                    <tr class="add-minus">
-                        <td><strong>*</strong>定单数量</td>
-                        <td><span>-</span><input type="text" value="1" id="txtcount"><span>+</span></td>
-                    </tr>
-                    <tr>
-                        <td>定单价格</td>
-                        <td><strong class="price">268.00</strong><span class="pt5">元</span></td>
-                    </tr>
-                    <tr>
-                        <td><strong>*</strong>收货人名</td>
-                        <td><input class="js-input" name="username" type="text" placeholder="请输入您的姓名或称呼"></td>
-                    </tr>
-                    <tr>
-                        <td><strong>*</strong>手机号码</td>
-                        <td><input class="js-input" name="phone" type="text" placeholder="请输入您的手机号码"></td>
-                    </tr>
-                    <tr>
-                        <td><strong>*</strong>选择地区</td>
-                        <td><input class="js-input" name="area" type="text" placeholder="请输入您的所在地区"></td>
-                    </tr>
-                    <tr>
-                        <td><strong>*</strong>详细地址</td>
-                        <td><textarea class="js-input" name="addess" placeholder="请填写您的详细地址"></textarea></td>
-                    </tr>
-                    <tr>
-                        <td>留言备注</td>
-                        <td><textarea class="js-input" name="msg" data-noneed="1" placeholder="如备用电话、商品数量、收货时间等，有额外需求请留言"></textarea></td>
-                    </tr>
-                    <tr>
-                        <td><strong>*</strong>支付方式</td>
-                        <td>
-                            <div><img src="/content/hjimages/paytype.jpg" style="width:50%"></div>
-                            <div class="btmsg">选择货到付款，安全放心</div>
-                        </td>
-                    </tr>
-                </table>
-                
-            </form>
+            </div>
+            <section class="js-submit"><img src="/Content/hjimages/hj_20.jpg" data-ratio="0.21066666666666667" data-src="/Content/hjimages/hj_20.jpg"></section>
         </div>
-        <section class="js-submit"><img src="/content/hjimages/dbshj_35.jpg" data-ratio="0.23466666666666666" data-src="/content/hjimages/dbshj_35.jpg"></section>
-    </div>
-    <script type="text/javascript" src="/content/jsstorage/jquery.app.js"></script>
-    <script type="text/javascript" src="/content/jsstorage/app.js"></script>
-</body>
-
+    </body>
+    <script type="text/javascript" src="js/app.js"></script>
 </html>
