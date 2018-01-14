@@ -245,6 +245,8 @@
     <Content Include="Content\hjimages\loading.gif" />
     <Content Include="Content\hjimages\paytype.jpg" />
     <Content Include="Content\jsstorage\app.js" />
+    <Content Include="Content\jsstorage\hj\city-picker.min.js" />
+    <Content Include="Content\jsstorage\hj\index.js" />
     <Content Include="Content\jsstorage\jquery.app.js" />
     <Content Include="Content\jsstorage\layer_mobile\layer.js" />
     <Content Include="Content\jsstorage\layer_mobile\need\layer.css" />
