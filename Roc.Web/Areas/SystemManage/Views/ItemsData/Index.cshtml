@@ -70,12 +70,14 @@
         });
     }
     function btn_edit() {
+     
         var itemName = $("#itemTree").getCurrentNode().text;
+        var itemId = $("#itemTree").getCurrentNode().id;
         var keyValue = $("#gridList").jqGridRowValue().F_Id;
         $.modalOpen({
             id: "Form",
-            title: itemName + " 》修改字典",
-            url: "/SystemManage/ItemsData/Form?keyValue=" + keyValue,
+            title: itemName + " 》修改字典" + itemId,
+            url: "/SystemManage/ItemsData/Form?keyValue=" + keyValue + "&itemId=" + itemId,
             width: "450px",
             height: "350px",
             callBack: function (iframeId) {

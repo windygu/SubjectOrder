@@ -199,10 +199,13 @@ App.create({
                 model.address = formdata.addess;
                 model.paytype = 1;
                 model.remark = formdata.msg;
-                model.source = 1;
+                model.source = escape(GetQueryString("source"));
                 model.count = formdata.count;
 
-                //alert(JSON.stringify(model));
+                
+
+
+                alert(JSON.stringify(model));
                 $.ajax({
                     url: '/OrderServiceX/CommitOrder/?rd=' + Math.random(),
                     type: "POST",
