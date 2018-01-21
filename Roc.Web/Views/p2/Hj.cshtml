@@ -38,7 +38,7 @@
         section {
             transition: transform 0.6s
         }
-        
+
         .loading-bg {
             background: #f7f7f7 url(@Roc.Uility.Source.SiteSource.CDNUrl_HongJiu/loading.gif) no-repeat 50% 50%;
             overflow: hidden;
@@ -157,16 +157,24 @@
             margin: 0 auto;
             max-width: 750px;
         }
+        		.js-gotoform{
+			cursor:pointer;
+		}
     </style>
     </head>
     <body>
         <div class="wrapper">
             <section><img src="@Roc.Uility.Source.SiteSource.CDNUrl_HongJiu/hj_01.jpg" data-ratio="0.344" data-src="@Roc.Uility.Source.SiteSource.CDNUrl_HongJiu/hj_01.jpg"></section>
-            <section><img src="@Roc.Uility.Source.SiteSource.CDNUrl_HongJiu/hj_02.jpg" data-ratio="1.428" data-src="@Roc.Uility.Source.SiteSource.CDNUrl_HongJiu/hj_02.jpg"></section>
+            @*<section><img src="@Roc.Uility.Source.SiteSource.CDNUrl_HongJiu/hj_02.jpg" data-ratio="1.428" data-src="@Roc.Uility.Source.SiteSource.CDNUrl_HongJiu/hj_02.jpg"></section>*@
             <section><img src="@Roc.Uility.Source.SiteSource.CDNUrl_HongJiu/hj_03.jpg" data-ratio="1.504" data-src="@Roc.Uility.Source.SiteSource.CDNUrl_HongJiu/hj_03.jpg"></section>
-            <section class="js-gotoform"><img src="@Roc.Uility.Source.SiteSource.CDNUrl_HongJiu/hj_04.jpg" data-ratio="0.452" data-src="@Roc.Uility.Source.SiteSource.CDNUrl_HongJiu/hj_04.jpg"></section>
+            @*<section class="js-gotoform"><img src="@Roc.Uility.Source.SiteSource.CDNUrl_HongJiu/hj_04.jpg" data-ratio="0.452" data-src="@Roc.Uility.Source.SiteSource.CDNUrl_HongJiu/hj_04.jpg"></section>*@
+
+            <section class="js-gotoform"><img src="/content/hjimages/hj_04.jpg" data-ratio="0.452" data-src="/content/hjimages/hj_04.jpg"></section>
+
+
             <section><img src="@Roc.Uility.Source.SiteSource.CDNUrl_HongJiu/empty.png" data-ratio="1.296" data-src="@Roc.Uility.Source.SiteSource.CDNUrl_HongJiu/hj_05.jpg"></section>
             <section><img src="@Roc.Uility.Source.SiteSource.CDNUrl_HongJiu/empty.png" data-ratio="1.3866666666666667" data-src="@Roc.Uility.Source.SiteSource.CDNUrl_HongJiu/hj_06.jpg"></section>
+            <section class="js-gotoform"><img src="/content/hjimages/hj_04.jpg" data-ratio="0.452" data-src="/content/hjimages/hj_04.jpg"></section>
             <section><img src="@Roc.Uility.Source.SiteSource.CDNUrl_HongJiu/empty.png" data-ratio="0.684" data-src="@Roc.Uility.Source.SiteSource.CDNUrl_HongJiu/hj_07.jpg"></section>
             <section><img src="@Roc.Uility.Source.SiteSource.CDNUrl_HongJiu/empty.png" data-ratio="0.7213333333333334" data-src="@Roc.Uility.Source.SiteSource.CDNUrl_HongJiu/hj_08.jpg"></section>
             <section><img src="@Roc.Uility.Source.SiteSource.CDNUrl_HongJiu/empty.png" data-ratio="0.49466666666666664" data-src="@Roc.Uility.Source.SiteSource.CDNUrl_HongJiu/hj_09.jpg"></section>
@@ -213,19 +221,19 @@
                         </tr>
                         <tr>
                             <td><strong>*</strong>收货人名</td>
-                            <td><input class="js-input" name="username" type="text"  placeholder="请输入您的姓名或称呼"></td>
+                            <td><input class="js-input" name="username" type="text" placeholder="请输入您的姓名或称呼"></td>
                         </tr>
                         <tr>
                             <td><strong>*</strong>手机号码</td>
-                            <td><input class="js-input" name="phone" type="text"  placeholder="请输入您的手机号码"></td>
+                            <td><input class="js-input" name="phone" type="text" placeholder="请输入您的手机号码"></td>
                         </tr>
                         <tr>
                             <td><strong>*</strong>选择地区</td>
-                            <td><input class="js-input" name="area" type="text"  id="city-picker" placeholder="请输入您的所在地区"></td>
+                            <td><input class="js-input" name="area" type="text" id="city-picker" placeholder="请输入您的所在地区"></td>
                         </tr>
                         <tr>
                             <td><strong>*</strong>详细地址</td>
-                            <td><textarea class="js-input" name="addess"  placeholder="请填写您的详细地址"></textarea></td>
+                            <td><textarea class="js-input" name="addess" placeholder="请填写您的详细地址"></textarea></td>
                         </tr>
                         <tr>
                             <td>留言备注</td>
