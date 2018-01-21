@@ -1,0 +1,615 @@
+﻿<!DOCTYPE html>
+<!-- saved from url=(0069)http://www.chengzijianzhan.com/tetris/page/64007889940/?tag=pc_iframe -->
+<html class="wf-iconfont-n4-active wf-active">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=320, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <link href="favicon.ico" rel="icon" type="image/x-icon">
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+
+    <script src="/Content/js/jquery/jquery-2.1.1.min.js"></script>
+    <script src="/Content/jsstorage/jquery.app.js"></script>
+    <script src="/Content/jsstorage/layer_mobile/layer.js"></script>
+    <link rel="stylesheet" href="/Content/xy/js/jquery-weui.css">
+    <script src="/Content/xy/js/jquery-weui.js"></script>
+    <script src="/Content/jsstorage/hj/city-picker.min.js"></script>
+    <script src="/Content/jsstorage/hj/index.js"></script>
+    <link href="/Content/jsstorage/layer_mobile/need/layer.css" rel="stylesheet" />
+
+
+    <title>北京同仁堂</title>
+    <script language="javascript" type="text/javascript" src="http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js"></script>
+    <script type="text/javascript">
+        (function (root) {
+            root._tt_config = true;
+            var ta = document.createElement('script'); ta.type = 'text/javascript'; ta.async = true;
+            ta.src = document.location.protocol + '/' + 's1.pstatp.com/bytecom/resource/track_log/src/toutiao-track-log.js';
+            ta.onerror = function () {
+                var request = new XMLHttpRequest();
+                var web_url = window.encodeURIComponent(window.location.href);
+                var js_url = ta.src;
+                var url = '/ad.toutiao.com/link_monitor/cdn_failed?web_url=' + web_url + '&js_url=' + js_url + '&convert_id=82834111239';
+                request.open('GET', url, true);
+                request.send(null);
+            }
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ta, s);
+        })(window);
+        var not3ad = function () { $("#not3orderform").attr("target", "_blank"); _taq.push({ convert_id: "82834111239", event_type: "form" }); };
+    </script>
+    <script language="javascript" type="text/javascript">
+        function getQueryUrlStrString(str, name) {
+            //获取问号以后的类容
+            var searchUrl = str.substring(str.indexOf("?") + 1)
+            if (searchUrl == undefined || searchUrl == 'undefined') {
+                return null
+            }
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+            var r = searchUrl.match(reg);
+            if (r != null) return unescape(r[2]);
+            return null;
+        }
+        var referrerUrl = document.referrer
+        var addcid = getQueryUrlStrString(referrerUrl, "cid") || "H2j";
+
+        function getQueryString(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return unescape(r[2]);
+            return null;
+        }
+        var bm = getQueryString("bm");
+        var cid = addcid;
+        console.log(cid)
+
+    </script>
+
+    <style type="text/css">
+        body {
+            font-size: 15px;
+            line-height: 200%;
+            font-family: "微软雅黑";
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+            color: #000;
+        }
+
+        div,
+        ul,
+        p,
+        img,
+        li {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        img {
+            width: 96%;
+            border: none;
+            vertical-align: top;
+            padding: 0 2%;
+        }
+
+        .container {
+            min-width: 320px;
+            max-width: 760px;
+            margin: 0 auto;
+            padding-bottom: 80px;
+        }
+
+        .dbt {
+            text-align: center;
+            font-size: 1.1em;
+            font-weight: 600;
+        }
+
+        .xbt {
+            padding: 1% 2%;
+            color: #000;
+            font-size: 1.2em;
+            text-indent: 2em;
+        }
+
+        .xbt1 {
+            padding: 0 2%;
+            color: #000;
+            font-size: 1.2em;
+        }
+
+        .ls {
+            color: #136ee9;
+            font-size: 1.2em;
+            text-align: center;
+            padding: 2%;
+        }
+
+        .tel {
+            background: #fffcd2;
+            text-align: center;
+            color: #e60012;
+            padding: 10px 0;
+            font-size: 17px;
+            margin: 2% 0;
+        }
+
+            .tel font {
+                font-size: 1.2em;
+                font-weight: 800;
+                padding: 6px 0;
+                display: block;
+            }
+
+            .tel img {
+                width: 50%;
+                margin-top: 12px;
+            }
+
+        .bk {
+            border: 1px solid #d9d29b;
+            margin: 1%;
+        }
+
+        .bk-l {
+            width: 28%;
+            margin: 1% 1% 0;
+            float: left;
+        }
+
+        .r {
+            text-indent: 2em;
+            line-height: 150%;
+            font-size: 1.2em;
+            margin: 2% 1%;
+        }
+
+        .rm {
+            font-size: 1.1em;
+            color: #ff0000;
+            margin-left: 1%;
+            line-height: 140%;
+        }
+
+        .titl {
+            padding-left: 2%;
+            font-weight: 800;
+            font-size: 17px;
+            color: #fff;
+            text-align: center;
+            background: #44c006;
+            padding: 8px 0;
+        }
+
+        .a1 {
+            padding: 0;
+            color: #f00;
+            font-size: 1.2em;
+        }
+
+        .mf {
+            width: 70px;
+            display: inline-block;
+            height: 30px;
+        }
+
+        #s_province,
+        #s_city,
+        #s_county {
+            width: 32%;
+            margin-right: 0px;
+            height: 25px;
+        }
+
+        .foot {
+            min-width: 320px;
+            max-width: 760px;
+            position: fixed;
+            bottom: 0;
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+        }
+
+            .foot img {
+                width: 100%;
+                padding: 0;
+            }
+
+            .foot span {
+                position: absolute;
+                right: 32%;
+                bottom: 40%;
+                font-size: 14px;
+                line-height: 100%;
+                color: #fff;
+                text-align: center;
+            }
+
+            .foot a {
+                display: block;
+                width: 22%;
+                height: 60%;
+                position: absolute;
+                right: 0;
+                bottom: 20%;
+            }
+
+        h3 {
+            padding: 1%;
+            border-bottom: 1px solid #ddd;
+            font-size: 1.4rem;
+            color: #000;
+            font-weight: 500
+        }
+
+        .time {
+            font-size: 15px;
+            color: #777;
+            line-height: 1.3rem;
+        }
+
+            .time .from {
+                color: #6299c6;
+                padding: 0 5px;
+            }
+
+        .rg {
+            color: rgb(255, 251, 0);
+            background-color: rgb(255, 41, 65);
+        }
+
+        .t-red {
+            color: #f00;
+        }
+
+        .f6 {
+            font-weight: 600;
+        }
+
+        .xtit {
+            color: rgb(255, 0, 0);
+            background-color: rgb(255, 251, 0);
+            padding: 3px 5px;
+        }
+    </style>
+
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            line-height: 1.5;
+            font-size: 15px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        img {
+            border: none;
+            width: 100%;
+            display: block;
+        }
+
+        section {
+            transition: transform 0.6s
+        }
+
+        .loading-bg {
+            background: #f7f7f7 url(@Roc.Uility.Source.SiteSource.CDNUrl_HongJiu/loading.gif) no-repeat 50% 50%;
+            overflow: hidden;
+            transform: translateY(-10px);
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 15px 0;
+        }
+
+        td {
+            padding: 10px;
+            vertical-align: top;
+            font-size: 18px;
+        }
+
+            td strong {
+                color: red;
+                display: inline-block;
+                vertical-align: middle;
+                padding-right: 4px;
+            }
+
+            td:first-child {
+                text-align: right;
+                padding-left: 0;
+                padding-right: 0;
+                line-height: 24px;
+                padding-top: 15px;
+            }
+
+        .bg-red {
+            background: red;
+            color: #fff;
+        }
+
+        input, textarea {
+            width: 100%;
+            line-height: 18px;
+            padding: 5px;
+            padding-bottom: 10px;
+            border: 1px solid #C6C6C6;
+            border-radius: 4px;
+            outline: none;
+        }
+
+            input:focus, textarea:focus {
+                border-color: #33ccff
+            }
+
+        textarea {
+            height: 100px;
+        }
+
+        .sale-type span {
+            padding: 5px;
+            display: inline-block;
+            border-radius: 4px;
+            margin-bottom: 5px;
+            border: 1px solid #C6C6C6;
+            color: #666;
+        }
+
+            .sale-type span.selected {
+                background: red;
+                color: #fff;
+                border: 1px solid red;
+            }
+
+        .add-minus span, .add-minus input {
+            display: inline-block;
+            line-height: 20px;
+            padding: 5px;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        .add-minus span {
+            border: 1px solid #ddd;
+            background: #eee;
+            color: red;
+            width: 30px;
+        }
+
+        .add-minus input {
+            border-radius: 0;
+            width: 60px;
+            border-width: 1px 0;
+        }
+
+        .price {
+            font-size: 18px;
+            color: red;
+            padding-top: 2px;
+            display: inline-block;
+        }
+
+        .pt5 {
+            display: inline-block;
+            position: relative;
+            top: 2px
+        }
+
+        .btmsg {
+            border: 1px solid #EBD3D3;
+            background: #FCEFDF;
+            border-radius: 4px;
+            padding: 15px;
+            margin-top: 10px;
+            color: #B70100;
+        }
+
+        .wrapper {
+            margin: 0 auto;
+            max-width: 750px;
+        }
+        		.js-gotoform{
+			cursor:pointer;
+		}
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h3>医生自述：我是这样战胜糖尿病的！血糖稳定6.0，远离并发症，多亏有了它！</h3>
+        <div class="time">2017-05-16<span class="from">健康管理125</span></div>
+        <div class="dbt"> 化糖前后，判若两人 </div>
+        <img src="/content/tangniaobing/01.png">
+        <div class="xbt"> 我是一个在内分泌科工作了30多年的医生，在患病之前，我也诊治过成千上万的糖尿病患者，虽然竭尽全力，给每一位患者精心选择降糖药、调整胰岛素剂量，可是往往最终的结果还是血糖不断反弹，并发症越来越严重！</div>
+        <img src="/content/tangniaobing/02.jpg">
+        <p class="xbt">日积月累，我逐渐对那些胰岛素、降糖药产生了怀疑，在日常诊断中，常常奉劝病人要加强体能方面的锻炼，严格忌口，尽量少吃药。而当我自己得了这个病时，却不能像作为医生时那样的坦然，也终于理解了身为患者急于康复的迫切心情。</p>
+        <p class="xbt">幸运的是，我遇到了<span class='rg'> 北京同仁堂葛根山药胶囊</span>，最终成功战胜了糖尿病！今天，我把自己的经历写下来，希望能给有需要的人一点帮助和建议。</p>
+        <img src="/content/tangniaobing/222222.jpg">
+        <!-- 免费领取 -->
+        <div class="tel">
+            <!--<p><font>【降糖茶】试用装1份</font></p>-->
+            <p>
+                <a href="#dg"><img src="/content/tangniaobing/dg.jpg" /></a>
+            </p>
+        </div>
+        <!-- 免费领取 -->
+        <p class="xbt">2010年夏天，我忽然感觉<span class='t-red'>非常口渴，身体沉重，腰酸腿疼，浑身无力，迈不开脚步，</span>猛然打了个寒颤："我这不会是被糖尿病缠上了吧！</p>
+        <img src="/content/tangniaobing/03.jpg">
+        <p class="xbt">赶紧去做了血糖检测，这一检测不得了,<span class='t-red'>血糖值15.6mmol/L，尿糖+ + +，</span>这下完了，怀疑成了事实，仿佛一个惊天霹雳。</p>
+        <p class="xbt">身为医生，我所熟知的药品里面，几乎找不到一种能让自己满意，对糖尿病真的起治疗作用的良药，这真是一种悲哀！</p>
+        <img src="/content/tangniaobing/04.jpg">
+        <p class="xbt">
+            明明知道降糖药不能长期用，但是血糖嗖嗖的往上飙，不吃能怎么办？虽然我已经竭力控制了用药量，但是时间一长，<span class='t-red'>恶心、呕吐、腹泻、头晕、乏力各种难受，视物模糊、高血压、高血脂……并发症更是接踵而来，整个人变得非常的虚弱。</span>
+            <img src="/content/tangniaobing/05.jpg">
+        <p class="xbt">尤其是<span class='t-red'>视网膜病变，让我的视力骤降，左眼一度只剩0.2，即使戴着眼镜，还是看不清患者的检查单、报告单，简直成了睁眼瞎，</span>写病历下医嘱都成了问题。</p>
+        <p class="xbt">并且因为血压高经常头晕头痛，浑身没劲儿，工作也变得力不从心，出诊时间从一天缩减到半天，又减到2小时，我依然感觉十分吃力，不得已办了病退，天天窝在家里头，只能走一步看一步。</p>
+        <!-- 免费领取 -->
+        <div class="tel">
+            <!--<p><font>【降糖茶】试用装1份</font></p>-->
+            <p>
+                <a href="#dg"><img src="/content/tangniaobing/dg.jpg" /></a>
+            </p>
+        </div>
+        <!-- 免费领取 -->
+
+        <p class="xbt">事情的转机是在一次学术讨论大会上，我了解到了<span class='rg'>北京同仁堂葛根山药胶囊</span>，回到家中仔细研究后，我觉得这个方子可以试一试，没有任何的副作用，伤不到我的胃肠肝肾，于是我开始服用。</p>
+        <img src="/content/tangniaobing/012.png">
+        <p class="xbt">结果用了不到半个月，亲身的感受特别明显，每天测量血糖都在往下降，口干口苦、头晕胸闷的状况减轻了不少，眼前明显亮堂了。后来<span class='t-red'>空腹血糖5.9，餐后1小时8.7，2小时6.5，完全正常，视力1.0，比没得病的时候看的还清楚，血压也不高，完全跟没得病时候一样，想吃就吃，想喝就喝，</span>跟换了个人似的。</p>
+        <img src="/content/tangniaobing/013.png">
+        <p class="xbt">为什么我的血糖能顺利的恢复正常？这是因为<span class='t-red f6'>北京同仁堂葛根山药胶囊</span><span class='t-red'>不同于以往的治疗把糖当垃圾一样扔掉，而是把体内堆积的血糖一一转化为能量、变成身体动力，如同把高高的雪山慢慢融化成水滋润大地的过程。</span></p>
+        <img src="/content/tangniaobing/014.png">
+        <p class="xbt">选择<span class='t-red f6'>北京同仁堂葛根山药胶囊</span>，人体血糖的高度并不是一下子就下来的，但只要这个高度一下来，就不太可能反弹回去，因为血糖逐步转化成为能量了，想反弹都不可能了！</p>
+        <!-- 免费领取 -->
+        <div class="tel">
+            <!--<p><font>【降糖茶】试用装1份</font></p>-->
+            <p>
+                <a href="#dg"><img src="/content/tangniaobing/dg.jpg" /></a>
+            </p>
+        </div>
+        <!-- 免费领取 -->
+        <p class="xbt">看到这么管用，我又将北京同仁堂葛根山药胶囊陆续介绍给其他被糖尿病困扰的亲戚朋友，他们无一例外的都恢复了健康，不仅血糖正常了，顺带并发症也全好了，这让我自己都有点不敢相信。</p>
+        <img src="/content/tangniaobing/017.jpg">
+        <p class="xbt">而随着我病情的康复，身体也越来越好，又被返聘回医院，接诊的时候，看着一个个被糖尿病折磨的痛苦不堪的患者，我真是感同身受。</p>
+        <div class="dbt">
+            <span class="xtit">
+                “糖人”变“常人”<br>
+                免遭截肢手术
+            </span>
+        </div>
+        <img src="/content/tangniaobing/018.jpg">
+        <p class="xbt">在我接触的糖尿病患者中，印象最深的一位是蔬菜大棚种植户宋德武，他糖尿病年头不少，吃药住院样样没少，可是效果不好。血糖忽高忽低，一直稳不下来，<span class='t-red '>整天头晕、恶心、吃不下饭，血压也高，心脏也不好，连脚上都开始溃烂，时间一长连路都走不了，再这样下去恐怕只能做截肢手术了，</span>不然难道让脚一点点烂下去吗？</p>
+        <img src="/content/tangniaobing/019.jpg">
+        <p class="xbt">我就建议他用<span class='t-red f6'>北京同仁堂葛根山药胶囊</span>，试试这个方子，没准儿能好呢！开始他根本不信，我好说歹说，他才答应试一试。现在，<span class='t-red '>不光吃饭好了，睡觉香了，血糖从18点多降到了5.9，脚上的伤口也愈合了，再也不用担心截肢了！</span>更是把我当掏心窝子的老朋友，大事小事都喜欢找我唠一唠！</p>
+        <div class="dbt">
+            <span class="xtit">
+                二十年糖尿病，<br>
+                喝酒吃肉，他是疯了吗？
+            </span>
+        </div>
+        <img src="/content/tangniaobing/020.jpg">
+        <p class="xbt">家住塘沽的老郑是通过康复的老糖友介绍来院就诊的，前几天他乐呵呵的打电话给我说："现在我见肉就吃，见酒也喝点，老哥们都觉得我疯了！"</p>
+        <p class="xbt">为什么会这样呢？原来他是二十多年老糖友，还有高血压、心脏病，怎么能这么不加节制的吃喝呢？</p>
+        <img src="/content/tangniaobing/021.jpg">
+        <p class="xbt">他身边的朋友还不知道，我早就推荐了<span class='t-red f6'>北京同仁堂葛根山药胶囊</span>给他，他吃上以后，<span class='t-red '>血糖越来越好，现在已经完全正常，一点儿都不高了，血压也不超标了，心脏也不难受了，身体都好了，当然敢享点口福了。</span></p>
+        <div class="tel">
+            <!--<p><font>【降糖茶】试用装1份</font></p>-->
+            <p>
+                <a href="#dg"><img src="/content/tangniaobing/dg.jpg" /></a>
+            </p>
+        </div>
+        <!-- 免费领取 -->
+        <!--  <p class="xbt">为了让更多的人了解肉桂化糖方，早日吃上化糖方，我把自己的化糖经历写下来在糖友圈里发了贴，结果一传十、十传百，我的帖子一下子火爆无比，每天都有很多来自全国各地的朋友给我留言咨询，不得不说网络的力量实在是太强大了。</p>
+        <img src="/content/tangniaobing/022.jpg" style="width:70%;margin: 0 auto;display: block;">
+        <p class="xbt">我毫无保留的将肉桂化糖方一一推荐给了他们，他们用后纷纷反馈给我说，血糖逐渐恢复正常了，并发症也跟着好了，身体倍儿棒，吃嘛嘛香！</p>
+        <p class="xbt">如有你或身边的亲戚朋友有糖尿病，不妨加上北京同仁堂葛根山药胶囊详细了解一下，真心希望各位赶紧好起来，早日摆脱血糖困扰！</p>
+        <div class="dbt"><span class="rg">官方客服微信号：htf88002</span></div> -->
+
+        <p class="xbt">有太多人受益于北京同仁堂葛根山药胶囊，下面我就简单的列举几位我身边的亲朋好友的真实案例：</p>
+        <div style=" padding:0;">
+            <div class="bk">
+                <div class="bk-l"><img src="/content/tangniaobing/7.jpg" /></div>
+                <p class="r">
+                    <span class="rm">李明鑫</span><br />
+                    <font style="text-indent:2em; display:block; padding-top:1%;">这位是我妹夫李明鑫，位居高职，高血糖、高血脂8年。我介绍他吃了北京同仁堂葛根山药胶囊，吃了一段时间之后，他说整个人都舒服很多，身体变得很舒畅。并且血糖开始好转，血脂都平稳了，现在血脂和血糖都控制得非常好。</font>
+                </p>
+                <div style="clear:both;"></div>
+            </div>
+            <div class="bk">
+                <div class="bk-l"><img src="/content/tangniaobing/8.jpg" /></div>
+                <p class="r">
+                    <span class="rm">陈宇先</span><br />
+                    <font style="text-indent:2em; display:block; padding-top:1%;">这位是我的老糖友陈宇先，糖尿病、高血糖12年。他说总觉得身体无力、口干、眼睛模糊、多汗、尿不尽。知道我条件不好，以前还经常分药给我，现在吃了我推荐的北京同仁堂葛根山药胶囊倒过来感谢我，看到大家都能健康真的很开心。</font>
+                </p>
+                <div style="clear:both;"></div>
+            </div>
+            <div class="bk">
+                <div class="bk-l"><img src="/content/tangniaobing/9.jpg" /></div>
+                <p class="r">
+                    <span class="rm">马国辉</span><br />
+                    <font style="text-indent:2em; display:block; padding-top:1%;">这是我的好朋友马国辉，不抽烟、不好赌，就好喝点酒。这糖尿病一得，大夫、老婆、孩子都给下了禁酒令。其实他也知道，有时候偷喝两口，这血糖就不稳了。不过自从吃了北京同仁堂葛根山药胶囊之后，估计我这化糖能力真的增强了。血糖特别稳，一直没超过6.5，这偶尔吃点西瓜，喝点酒，血糖也不高，真是我的救星啊。有了它，这糖尿病我觉得一点都不可怕。</font>
+                </p>
+                <div style="clear:both;"></div>
+            </div>
+
+        </div>
+        <p class="xbt">我还有认识了很多年的糖友，都是使用不到一个月就收到很明显的效果，他们也支持我把这个产品推广开来，让更多的患者摆脱糖尿病高血糖的折磨。</p>
+        <p class="xbt">我要分享的经历就这么多，糖友们，我是强烈建议你不要放弃，试试这个好方法。但是你要觉得不相信或者想放弃，毕竟每个人都有自己的选择，我也是希望你能收获健康。如果你们希望并且能够把糖尿病高血糖解决，反正现在有免费领取的活动，试一试总不会有大碍！相信你也同样会惊叹于它的效果。</p>
+        <a name="hd"></a>
+        <p class="titl"><strong>活动介绍</strong></p>
+        <p class="a1">一、为什么不要钱免费领取？</p>
+        <p class="xbt">这次免费领取是厂家回馈活动，希望给位糖友用口碑宣传北京同仁堂葛根山药胶囊，让各位糖友摆脱其它无效昂贵产品的困扰。我们的产品免费送出，产品成本费用已由公司承担，但是产品会产生专利费和所有权等费用，需要付给研发者的，还需要领取者自行承担，感谢大家尊重我们研发者的心血！也希望各位糖友早日收到北京同仁堂葛根山药胶囊，早日康复。</p>
+        <p class="a1">二、本次免费活动派发对象</p>
+        <p class="xbt1">☆ 四十岁以上不参加体力劳动的体胖人群</p>
+        <p class="xbt1">☆ 有糖尿病家族史或者曾经血糖高的人群</p>
+        <p class="xbt1">☆ 体弱多病，免疫力低下人群、有血糖、血脂和血压异常人群</p>
+        <p class="xbt1">☆ 30岁以上的妊娠妇女，曾经分娩巨大婴儿者</p>
+        <p class="xbt1">☆ 常规三高（血糖、血脂、血压）人群</p>
+        <p class="a1">三、以下人士烦请勿扰</p>
+        <p class="xbt">1、同行人员。很多同行看到我们免费提供试用后，不但自己来申请，还雇佣大量网民来申请，然后再拿去销售，我们只对真正有需要的糖友做活动，拜托有良知的同行勿扰，谢谢！</p>
+        <p class="xbt">2、无关人员。不排除我们的活动会被毫无需求的无关人员看到，随便领取，如果您没有降糖需求，恳请您不要领取，给真正有需要的人留一份机会。</p>
+        <a name="dg"></a>
+
+
+        @* 表单开始 *@
+        <div class="js-form">
+            <form action="#" id="buyForm">
+                <table>
+                    <colgroup>
+                        <col width="25%">
+                        <col width="75%">
+                    </colgroup>
+
+
+
+                    <tr>
+                        <td><strong>*</strong>收货人名</td>
+                        <td><input class="js-input" name="username" type="text" placeholder="请输入您的姓名或称呼"></td>
+                    </tr>
+                    <tr>
+                        <td><strong>*</strong>手机号码</td>
+                        <td><input class="js-input" name="phone" type="text" placeholder="请输入您的手机号码"></td>
+                    </tr>
+                    <tr>
+                        <td><strong>*</strong>选择地区</td>
+                        <td><input class="js-input" name="area" type="text" id="city-picker" placeholder="请输入您的所在地区"></td>
+                    </tr>
+                    <tr>
+                        <td><strong>*</strong>详细地址</td>
+                        <td><textarea class="js-input" name="addess" placeholder="请填写您的详细地址"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td>留言备注</td>
+                        <td><textarea class="js-input" name="msg" data-noneed="1" placeholder="如备用电话、商品数量、收货时间等，有额外需求请留言"></textarea></td>
+                    </tr>
+
+
+                </table>
+                <section class="js-submit"><img src="/Content/tangniaobing/hj_20.jpg" data-ratio="0.21066666666666667" data-src="/Content/tangniaobing/hj_20.jpg"></section>
+            </form>
+
+        </div>
+        @* 表单结束 *@
+        <p style=" font-weight:bold; padding-top:0;">因全国领取的朋友太多，名额有限，我们希望能帮助到真正需要帮助的人；同时，领取后老师会一对一进行指导调理，给您健康的福音。所以仅限本人领取，我们会在48小时之内回电确认信息是否有误，请保持手机畅通，敬请谅解，谢谢！</p>
+
+
+</body>
+<script type="text/javascript">
+
+    function GetQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]); return null;
+    }
+</script>
+<script type="text/javascript" src="/Content/jsstorage/app.js"></script>
+</html>
