@@ -16,5 +16,7 @@ namespace Roc.Uility.Source
 
         public static string CDNUrl_Fengshi = "http://p1ziayc7m.bkt.clouddn.com";//  /content/fengshi_files
 
+        public static string CDNUrl_HongJiu = "http://p2v2nsa4g.bkt.clouddn.com/xy";//  /content/hjimages  红酒
+
     }
 }

@@ -168,9 +168,8 @@ App.create({
 
         '*.js-submit': {
             'on:click': function (){
-                //提交验证
-                console.log(this.data);
-
+              
+                var error;
                 this.element('.js-input').each(function (){
                     var need = this.getAttribute('data-noneed') != '1';
 
@@ -181,12 +180,16 @@ App.create({
                             content: this.getAttribute('placeholder')
                             , btn: '我知道了'
                         });
+                        error=true;
                         this.focus();
                         return false;
                     }
-
-                    
                 });
+                if(error)
+                {
+                    return;
+                }
+                
                 var a = JSON.stringify(this.data);
                 var formdata = JSON.parse(a);
                 var model = {};
@@ -205,7 +208,7 @@ App.create({
                 
 
 
-                alert(JSON.stringify(model));
+             
                 $.ajax({
                     url: '/OrderServiceX/CommitOrder/?rd=' + Math.random(),
                     type: "POST",
