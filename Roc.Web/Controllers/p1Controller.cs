@@ -25,5 +25,9 @@ namespace Roc.Web.Controllers
         {
             return View();
         }
+        public ActionResult tnb()
+        {
+            return View();
+        }
     }
 }

@@ -10,6 +10,7 @@ using Roc.Uility;
 using System.Web.Mvc;
 using Roc.Application.SystemManage;
 using Roc.Model.Entity.SystemManage;
+using System.Web;
 
 namespace Roc.Web.Controllers
 {
@@ -31,12 +32,12 @@ namespace Roc.Web.Controllers
             orderEntity.F_ShortAddress = data.address;
             orderEntity.F_PayType = data.paytype.ToInt();
             orderEntity.F_Remark = data.remark;
-            orderEntity.F_Source = data.source.ToInt();
+            orderEntity.F_Source =HttpUtility.UrlDecode(data.source);
             orderEntity.F_ProductName = data.productname;
             orderApp.SubmitForm(orderEntity, null, "");
              
             return AjaxSuccess("恭喜您！订单已经生成我们会在收到订单后第一时间联系您！请耐心等待！");
         }
-
+  
     }
 }

@@ -19,11 +19,19 @@ namespace Roc.Application.SystemManage
 {
     public class OrderApp
     {
-		private IOrderRepository service = new OrderRepository();
+        private IOrderRepository service = new OrderRepository();
 
-		public List<OrderEntity> GetList(Pagination pagination, string queryJson)
+        public List<OrderEntity> GetList(Pagination pagination, string queryJson)
         {
-            return service.GetList().OrderBy(t => t.F_CreatorTime).ToList();
+            var expression = ExtLinq.True<OrderEntity>();
+            if (!string.IsNullOrEmpty(queryJson))
+            {
+                expression = expression.And(t => t.F_Source.Contains(queryJson));
+                expression = expression.Or(t => t.F_Source.Contains(queryJson));
+            }
+
+
+            return service.GetList(expression, m => m.F_CreatorTime).ToList();
         }
         public void DeleteForm(string keyValue)
         {

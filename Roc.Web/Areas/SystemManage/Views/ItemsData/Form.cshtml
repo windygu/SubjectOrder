@@ -24,6 +24,8 @@
         }
         var postData = $("#form1").formSerialize();
         postData["F_ItemId"] = itemId;
+
+        //alert(JSON.stringify(postData));
         $.submitForm({
             url: "/SystemManage/ItemsData/SubmitForm?keyValue=" + keyValue,
             param: postData,
@@ -35,6 +37,7 @@
 </script>
 
 <form id="form1">
+    <input type="hidden" id="F_ItemId" name="F_ItemId" />
     <div style="padding-top: 20px; margin-right: 20px;">
         <table class="form">
             <tr>
