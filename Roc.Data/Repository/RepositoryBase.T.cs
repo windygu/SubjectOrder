@@ -142,9 +142,12 @@ namespace Roc.Data
             ;
             " + sqlCount.SqlString;
             var reader = connection.QueryMultiple(sqlText, sql.Parameters);
+
             var list = reader.Read<TEntity>();
-            var records = reader.Read<int>().FirstOrDefault();
-            p.records = records;
+
+            //var records = reader.Read<int>().FirstOrDefault();
+
+            p.records = 0;// records;
             return list;
         }
 

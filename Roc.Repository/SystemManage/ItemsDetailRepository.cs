@@ -8,6 +8,7 @@ using Roc.Data;
 using Roc.Model.Entity.SystemManage;
 using Roc.Model.IRepository.SystemManage;
 using Roc.Repository.SystemManage;
+using Roc.Uility;
 using System.Collections.Generic;
 using System.Data.Common;
 using System.Data.SqlClient;
@@ -32,6 +33,7 @@ namespace Roc.Repository.SystemManage
             {
                  new SqlParameter("@enCode",enCode)
             };
+            
             //return this.FindList(strSql.ToString(), parameter);
             return null;
         }
