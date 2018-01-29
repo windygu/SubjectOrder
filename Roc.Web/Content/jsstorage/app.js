@@ -204,7 +204,7 @@ App.create({
                 model.remark = formdata.msg;
                 model.source = escape(GetQueryString("source"));
                 model.count = formdata.count;
-
+                model.code = $.trim($("#txtcode").val());
                 
 
 
@@ -216,6 +216,13 @@ App.create({
                     contentType: "application/json; charset=utf-8",
                     dataType: 'JSON',
                     success: function (result) {
+                        if (result.state=="error") {
+                            layer.open({
+                                content: result.message
+                                , btn: '我知道了'
+                            });
+                            return;
+                        }
                         $('#buyForm')[0].reset()
                         layer.open({
                             content: result.message

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Roc.Uility;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -18,6 +19,12 @@ namespace Roc.Web.Controllers
         public ActionResult Hj()
         {
             return View();
+        }
+        public ActionResult pwd()
+        {
+            var a = Md5.md5(Common.CreateNo(), 16).ToLower();
+            var p = Md5.md5(DESEncrypt.Encrypt(Md5.md5("xyadvip888", 32).ToLower(), a).ToLower(), 32).ToLower();
+            return Content(p);
         }
     }
 }
