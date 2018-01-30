@@ -123,7 +123,7 @@ namespace Roc.Web.Controllers
         {
 
             var conn = DbHelper.GetInstance().CreateConnection("");
-            var sql = "select * from Sys_SMSLog where F_Phone='" + phone + "' and F_UserStatus=0 order by F_CreatorTime desc";
+            var sql = "select top 1 * from Sys_SMSLog where F_Phone='" + phone + "' and F_UserStatus=0 order by F_CreatorTime desc";
      
             var reader = conn.ExecuteReader(sql);
 
