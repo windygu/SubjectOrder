@@ -559,9 +559,6 @@
     <Content Include="Content\fengshi_files\area.js.下载" />
     <Content Include="Content\fengshi_files\dg.js.下载" />
     <Content Include="Content\fengshi_files\toutiao-track-log.js.下载" />
-    <None Include="Views\p1\Fuall.cshtml" />
-    <None Include="Views\p1\jz.cshtml" />
-    <None Include="Views\p1\fs.cshtml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -812,8 +809,6 @@
     <Content Include="Areas\SystemManage\Views\Order\Form.cshtml" />
     <Content Include="Areas\SystemManage\Views\Order\Details.cshtml" />
     <None Include="Properties\PublishProfiles\NFine.Framework.Release.pubxml" />
-    <Content Include="Views\Test\Index.cshtml" />
-    <Content Include="Views\p1\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

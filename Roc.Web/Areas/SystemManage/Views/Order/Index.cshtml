@@ -55,16 +55,19 @@
                         //else {
                         //    return '';
                         //}
-                        return cellvalue;
+                        if (cellvalue != "null") {
+                            return cellvalue;
+                        }
+                        return '未知';
                     }
                 },
                 {
-                    label: '支付状态', name: 'F_Status', width: 80, align: 'center',
+                    label: '支付状态', name: 'F_PayType', width: 80, align: 'center',
                     formatter: function (cellvalue, options, rowObject) {
                         if (cellvalue == 0) {
                             return '未支付';
                         } else if (cellvalue == 1) {
-                            return '已支付';
+                            return '<span class=\"label label-success\">已支付</span>';
                         }
                         else {
                             return '';
@@ -89,18 +92,8 @@
                     }
                 },
                 { label: '下单时间', name: 'F_CreatorTime', width: 150, align: 'center' },
-                { label: '备注', name: 'F_Remark', width: 150, align: 'left' },
-                {
-                    label: '沟通状态', name: 'F_TalkStatus', width: 80, align: 'center',
-                    formatter: function (cellvalue, options, rowObject) {
-                        if (cellvalue == 0) {
-                            return '<span class=\"label label-success\">未沟通</span>';
-                        }else {
-                            return '<span class=\"label label-default\">已沟通</span>';
-                        }
-
-                    }
-                }
+                { label: '备注', name: 'F_Remark', width: 150, align: 'left' }
+     
  
             ],
             pager: "#gridPager",
@@ -189,9 +182,9 @@
         });
     }
     //已沟通
-    function btn_talked() {
+    function btn_payed() {
         var keyValue = $("#gridList").jqGridRowValue().F_Id;
-        $.modalConfirm("注：确定把订单【沟通状态】设置已沟通？", function (r) {
+        $.modalConfirm("注：确定把当前订单设置【已支付】吗？", function (r) {
             if (r) {
                 $.submitForm({
                     url: "/SystemManage/Order/StartTalk",
@@ -206,7 +199,7 @@
     //已发货
     function btn_sendedpackage() {
         var keyValue = $("#gridList").jqGridRowValue().F_Id;
-        $.modalConfirm("注：确定把订单【发货状态】设置已已发货吗？", function (r) {
+        $.modalConfirm("注：确定把该订单设置为【发货状态】吗？", function (r) {
             if (r) {
                 $.submitForm({
                     url: "/SystemManage/Order/StartSendPackage",
@@ -228,7 +221,7 @@
         </div>
 
         <div class="btn-group">
-            <a id="NF-add" authorize="yes" class="btn btn-primary dropdown-text" onclick="btn_add()"><i class="fa fa-plus"></i>录入订单</a>
+            @*<a id="NF-add" authorize="yes" class="btn btn-primary dropdown-text" onclick="btn_add()"><i class="fa fa-plus"></i>录入订单</a>*@
         </div>
         <div class="operate">
             <ul class="nav nav-pills">
@@ -240,7 +233,7 @@
                 <li class="split"></li>
                 <li><a id="NF-disabled" authorize="yes" onclick="btn_disabled()"><i class="fa fa-stop-circle"></i>未发货</a></li>
                 <li><a id="NF-SendedPackage" authorize="yes" onclick="btn_sendedpackage()"><i class="fa fa-play-circle"></i>已发货</a></li>
-                <li><a id="NF-Talked" authorize="yes" onclick="btn_talked()"><i class="fa fa-play-circle"></i>已沟通</a></li>
+                <li><a id="NF-Payed" authorize="yes" onclick="btn_payed()"><i class="fa fa-play-circle"></i>已支付</a></li>
  
  
             </ul>
@@ -253,7 +246,7 @@
             <tr>
                 <td>
                     <div class="input-group">
-                        <input id="txt_keyword" type="text" class="form-control" placeholder="订单来源关键字" style="width: 200px;">
+                        <input id="txt_keyword" type="text" class="form-control" placeholder="来源关键字 / 电话 / 姓名" style="width: 200px;">
                         <span class="input-group-btn">
                             <button id="btn_search" type="button" class="btn  btn-primary"><i class="fa fa-search"></i></button>
                         </span>

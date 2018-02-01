@@ -52,7 +52,7 @@ namespace Roc.Web.Areas.SystemManage.Controllers
         {
            var orderEntity = orderApp.GetForm(keyValue);
             orderEntity.F_Id = keyValue;
-            orderEntity.F_TalkStatus = 1;
+            orderEntity.F_PayType = 1;
             orderApp.UpdateForm(orderEntity);
             return Success("设置状态成功。");
         }

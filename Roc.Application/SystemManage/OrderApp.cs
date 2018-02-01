@@ -28,6 +28,8 @@ namespace Roc.Application.SystemManage
             {
                 expression = expression.And(t => t.F_Source.Contains(queryJson));
                 expression = expression.Or(t => t.F_Source.Contains(queryJson));
+                expression = expression.Or(t => t.F_UserName.Contains(queryJson));
+                expression = expression.Or(t => t.F_UserTelphone.Contains(queryJson));
             }
 
 
