@@ -18,7 +18,7 @@ App.directive({
 
             this.element(el).each(function (){
                 var rect = this.getClientRects()[0];
-                if (rect.bottom < 0 || rect.top > height) {
+                if (!rect||rect.bottom < 0 || rect.top > height) {
                     return;
                 }
 
@@ -200,12 +200,12 @@ App.create({
                 model.phone = formdata.phone;
                 model.area = $("#city-picker").val();
                 model.address = formdata.addess;
-                model.paytype = 1;
+                model.paytype = 0;
                 model.remark = formdata.msg;
                 model.source = escape(GetQueryString("source"));
                 model.count = formdata.count;
                 model.code = $.trim($("#txtcode").val());
-                
+                model.productid = 1;
 
 
              

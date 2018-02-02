@@ -26,5 +26,9 @@ namespace Roc.Web.Controllers
             var p = Md5.md5(DESEncrypt.Encrypt(Md5.md5("xyadvip888", 32).ToLower(), a).ToLower(), 32).ToLower();
             return Content(p);
         }
+        public ActionResult pzhj()
+        {
+            return View();
+        }
     }
 }

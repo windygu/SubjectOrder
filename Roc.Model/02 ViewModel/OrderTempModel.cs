@@ -20,6 +20,7 @@ namespace Roc.Model.ViewModel
         public string count { set; get; }
         public string source { set; get; }
         public string code { set; get; }
+        public int productid { set; get; }
         
     }
 

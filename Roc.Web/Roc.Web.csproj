@@ -244,6 +244,7 @@
     <Content Include="Content\hjimages\hj_20.jpg" />
     <Content Include="Content\hjimages\loading.gif" />
     <Content Include="Content\hjimages\paytype.jpg" />
+    <Content Include="Content\jsstorage\pzhjapp.js" />
     <Content Include="Content\jsstorage\app.js" />
     <Content Include="Content\jsstorage\hj\city-picker.min.js" />
     <Content Include="Content\jsstorage\hj\index.js" />
@@ -559,6 +560,7 @@
     <Content Include="Content\fengshi_files\area.js.下载" />
     <Content Include="Content\fengshi_files\dg.js.下载" />
     <Content Include="Content\fengshi_files\toutiao-track-log.js.下载" />
+    <None Include="Views\p2\pzhj.cshtml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>

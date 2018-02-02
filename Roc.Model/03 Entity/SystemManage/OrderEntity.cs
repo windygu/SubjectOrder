@@ -23,6 +23,7 @@ namespace Roc.Model.Entity.SystemManage
         public string F_ShortAddress { set; get; }
         public Decimal? F_Total { get; set; }
         public Int32? F_PayType { get; set; }
+        
         public Int32? F_OrderType { get; set; }
         public string F_Source { set; get; }
         public Int32? F_Count { get; set; }

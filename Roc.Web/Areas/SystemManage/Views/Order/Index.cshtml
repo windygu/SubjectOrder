@@ -15,14 +15,14 @@
                 { label: '主键', name: 'F_Id', hidden: true },
                 { label: '姓名', name: 'F_UserName', width: 80, align: 'center' },
                 { label: '手机', name: 'F_UserTelphone', width: 80, align: 'center' },
-               
+
                 { label: '地区', name: 'F_ShortAddress', width: 120, align: 'left' },
 
                 { label: '地址', name: 'F_Address', width: 120, align: 'left' },
                 {
                     label: '产品名称', name: 'F_ProductName', width: 180, align: 'center',
                     formatter: function (cellvalue, options, rowObject) {
-                        if (cellvalue!=null) {
+                        if (cellvalue != null) {
                             return cellvalue;
                         } else {
                             return '';
@@ -32,13 +32,23 @@
                 },
                 { label: '数量', name: 'F_Count', width: 80, align: 'center' },
                 {
-                    label: '付款类型', name: 'F_PayType', width: 80, align: 'center',
+                    label: '付款类型', name: 'F_Count', width: 80, align: 'center',
+                    formatter: function (cellvalue, options, rowObject) {
+                        return '货到付款';
+                    }
+                },
+                {
+                    label: '来源落地页', name: 'F_ProductId', width: 80, align: 'center',
                     formatter: function (cellvalue, options, rowObject) {
                         if (cellvalue == 1) {
-                            return '货到付款';
-                        } else if (cellvalue == 0) {
-                            return '在线支付';
-                        } else
+                            return '德比斯A落地页';
+                        } else if (cellvalue == 2) {
+                            return '德比斯B落地页';
+                        }
+                        else if (cellvalue == 3) {
+                            return '德比斯C落地页';
+                        }
+                        else
                             return '-';
                     }
                 },
@@ -51,7 +61,7 @@
                         //}
                         //if (cellvalue == 2) {
                         //    return '淘宝';
-                        //} 
+                        //}
                         //else {
                         //    return '';
                         //}
@@ -78,7 +88,7 @@
                 {
                     label: '发货状态', name: 'F_OrderType', width: 80, align: 'center',
                     formatter: function (cellvalue, options, rowObject) {
-                       
+
                         if (cellvalue == 0) {
                             return '未发货';
                         }
@@ -93,8 +103,8 @@
                 },
                 { label: '下单时间', name: 'F_CreatorTime', width: 150, align: 'center' },
                 { label: '备注', name: 'F_Remark', width: 150, align: 'left' }
-     
- 
+
+
             ],
             pager: "#gridPager",
             sortname: 'F_DepartmentId asc,F_CreatorTime desc',
@@ -139,7 +149,7 @@
                 $.currentWindow().$("#gridList").trigger("reloadGrid");
             }
         })
-      
+
     }
     //function btn_details() {
     //    var keyValue = $("#gridList").jqGridRowValue().F_Id;
@@ -234,8 +244,8 @@
                 <li><a id="NF-disabled" authorize="yes" onclick="btn_disabled()"><i class="fa fa-stop-circle"></i>未发货</a></li>
                 <li><a id="NF-SendedPackage" authorize="yes" onclick="btn_sendedpackage()"><i class="fa fa-play-circle"></i>已发货</a></li>
                 <li><a id="NF-Payed" authorize="yes" onclick="btn_payed()"><i class="fa fa-play-circle"></i>已支付</a></li>
- 
- 
+
+
             </ul>
             <a href="javascript:;" class="close"></a>
         </div>

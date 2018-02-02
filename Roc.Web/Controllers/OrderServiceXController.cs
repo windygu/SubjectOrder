@@ -30,6 +30,7 @@ namespace Roc.Web.Controllers
             orderEntity.F_UserName = data.username;
             orderEntity.F_UserTelphone = data.phone;
             orderEntity.F_Address = data.area;
+            orderEntity.F_ProductId = data.productid;//产品区分id
             orderEntity.F_ShortAddress = data.address;
             orderEntity.F_PayType = data.paytype.ToInt();
             orderEntity.F_Remark = data.remark;
