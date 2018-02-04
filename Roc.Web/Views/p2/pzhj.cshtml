@@ -1,0 +1,316 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = null;
+}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>德比斯红葡萄酒</title>
+    <script src="/Content/js/jquery/jquery-2.1.1.min.js"></script>
+    <script src="/Content/jsstorage/jquery.app.js"></script>
+    <script src="/Content/jsstorage/layer_mobile/layer.js"></script>
+    <link rel="stylesheet" href="/Content/xy/js/jquery-weui.css">
+    <script src="/Content/xy/js/jquery-weui.js"></script>
+    <script src="/Content/jsstorage/hj/city-picker.min.js"></script>
+    <link href="/Content/jsstorage/layer_mobile/need/layer.css" rel="stylesheet" />
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            line-height: 1.5;
+            font-size: 15px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        img {
+            border: none;
+            width: 100%;
+            display: block;
+        }
+
+        .loading-bg {
+            background: #f7f7f7 url(http://hjimg.andus-china.com/pzhj/images/loading.gif) no-repeat 50% 50%;
+            overflow: hidden;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 15px 0;
+        }
+
+        td {
+            padding: 10px;
+            vertical-align: top;
+            font-size: 18px;
+        }
+
+            td strong {
+                color: red;
+                display: inline-block;
+                vertical-align: middle;
+                padding-right: 4px;
+            }
+
+            td:first-child {
+                text-align: right;
+                padding-left: 0;
+                padding-right: 0;
+                line-height: 24px;
+                padding-top: 15px;
+            }
+
+        .bg-red {
+            background: red;
+            color: #fff;
+        }
+
+        input, textarea {
+            width: 100%;
+            line-height: 18px;
+            padding: 5px;
+            padding-bottom: 10px;
+            border: 1px solid #C6C6C6;
+            border-radius: 4px;
+            outline: none;
+        }
+
+            input:focus, textarea:focus {
+                border-color: #33ccff
+            }
+
+        textarea {
+            height: 100px;
+        }
+
+        .sale-type span {
+            padding: 5px;
+            display: inline-block;
+            border-radius: 4px;
+            margin-bottom: 5px;
+            border: 1px solid #C6C6C6;
+            color: #666;
+        }
+
+            .sale-type span.selected {
+                background: red;
+                color: #fff;
+                border: 1px solid red;
+            }
+
+        .add-minus span, .add-minus input {
+            display: inline-block;
+            line-height: 20px;
+            padding: 5px;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        .add-minus span {
+            border: 1px solid #ddd;
+            background: #eee;
+            color: red;
+            width: 30px;
+        }
+
+        .add-minus input {
+            border-radius: 0;
+            width: 60px;
+            border-width: 1px 0;
+        }
+
+        .price {
+            font-size: 18px;
+            color: red;
+            padding-top: 2px;
+            display: inline-block;
+        }
+
+        .pt5 {
+            display: inline-block;
+            position: relative;
+            top: 2px
+        }
+
+        .btmsg {
+            border: 1px solid #EBD3D3;
+            background: #FCEFDF;
+            border-radius: 4px;
+            padding: 15px;
+            margin-top: 10px;
+            color: #B70100;
+        }
+
+        .wapper {
+            margin: 0 auto;
+            max-width: 750px;
+        }
+        .js-gotoform {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wapper">
+        <section><img src="http://hjimg.andus-china.com/pzhj/images/dbs_01.jpg" data-ratio="0.529644" data-src="http://hjimg.andus-china.com/pzhj/images/dbs_01.jpg"></section>
+        <section><img src="http://hjimg.andus-china.com/pzhj/images/dbs_02.jpg" data-ratio="1.249012" data-src="http://hjimg.andus-china.com/pzhj/images/dbs_02.jpg"></section>
+        <section class="js-gotoform"><img src="http://hjimg.andus-china.com/pzhj/images/dbs_03.jpg" data-ratio="0.449275" data-src="http://hjimg.andus-china.com/pzhj/images/dbs_03.jpg"></section>
+        <section><img src="http://hjimg.andus-china.com/pzhj/images/dbs_04.jpg" data-ratio="1.299078" data-src="http://hjimg.andus-china.com/pzhj/images/dbs_04.jpg"></section>
+        <section><img src="http://hjimg.andus-china.com/pzhj/images/dbs_05.jpg" data-ratio="1.512516" data-src="http://hjimg.andus-china.com/pzhj/images/dbs_05.jpg"></section>
+        <section><img src="http://hjimg.andus-china.com/pzhj/images/dbs_06.jpg" data-ratio="0.561265" data-src="http://hjimg.andus-china.com/pzhj/images/dbs_06.jpg"></section>
+        <section><img src="http://hjimg.andus-china.com/pzhj/images/dbs_07.jpg" data-ratio="1.516469" data-src="http://hjimg.andus-china.com/pzhj/images/dbs_07.jpg"></section>
+        <section><img src="http://hjimg.andus-china.com/pzhj/images/dbs_08.jpg" data-ratio="1.083004" data-src="http://hjimg.andus-china.com/pzhj/images/dbs_08.jpg"></section>
+        <section><img src="http://hjimg.andus-china.com/pzhj/images/dbs_09.jpg" data-ratio="0.549407" data-src="http://hjimg.andus-china.com/pzhj/images/dbs_09.jpg"></section>
+        <section><img src="http://hjimg.andus-china.com/pzhj/images/dbs_10.jpg" data-ratio="0.613966" data-src="http://hjimg.andus-china.com/pzhj/images/dbs_10.jpg"></section>
+        <section><img src="http://hjimg.andus-china.com/pzhj/images/dbs_11.jpg" data-ratio="0.681159" data-src="http://hjimg.andus-china.com/pzhj/images/dbs_11.jpg"></section>
+        <section><img src="http://hjimg.andus-china.com/pzhj/images/dbs_12.jpg" data-ratio="1.285903" data-src="http://hjimg.andus-china.com/pzhj/images/dbs_12.jpg"></section>
+        <section><img src="http://hjimg.andus-china.com/pzhj/images/dbs_13.jpg" data-ratio="0.675889" data-src="http://hjimg.andus-china.com/pzhj/images/dbs_13.jpg"></section>
+        <section><img src="http://hjimg.andus-china.com/pzhj/images/dbs_14.jpg" data-ratio="1.241107" data-src="http://hjimg.andus-china.com/pzhj/images/dbs_14.jpg"></section>
+        <section><img src="http://hjimg.andus-china.com/pzhj/images/dbs_15.jpg" data-ratio="0.607378" data-src="http://hjimg.andus-china.com/pzhj/images/dbs_15.jpg"></section>
+        <section><img src="http://hjimg.andus-china.com/pzhj/images/dbs_16.jpg" data-ratio="0.376812" data-src="http://hjimg.andus-china.com/pzhj/images/dbs_16.jpg"></section>
+        <section><img src="http://hjimg.andus-china.com/pzhj/images/dbs_17.jpg" data-ratio="0.392622" data-src="http://hjimg.andus-china.com/pzhj/images/dbs_17.jpg"></section>
+        <section><img src="http://hjimg.andus-china.com/pzhj/images/dbs_18.jpg" data-ratio="0.782609" data-src="http://hjimg.andus-china.com/pzhj/images/dbs_18.jpg"></section>
+        <section><img src="http://hjimg.andus-china.com/pzhj/images/dbs_19.jpg" data-ratio="0.496706" data-src="http://hjimg.andus-china.com/pzhj/images/dbs_19.jpg"></section>
+        <section><img src="http://hjimg.andus-china.com/pzhj/images/dbs_20.jpg" data-ratio="0.491436" data-src="http://hjimg.andus-china.com/pzhj/images/dbs_20.jpg"></section>
+        <section><img src="http://hjimg.andus-china.com/pzhj/images/dbs_21.jpg" data-ratio="0.570487" data-src="http://hjimg.andus-china.com/pzhj/images/dbs_21.jpg"></section>
+        <section><img src="http://hjimg.andus-china.com/pzhj/images/dbs_22.jpg" data-ratio="0.945982" data-src="http://hjimg.andus-china.com/pzhj/images/dbs_22.jpg"></section>
+        <section><img src="http://hjimg.andus-china.com/pzhj/images/dbs_23.jpg" data-ratio="0.505929" data-src="http://hjimg.andus-china.com/pzhj/images/dbs_23.jpg"></section>
+        <section><img src="http://hjimg.andus-china.com/pzhj/images/dbs_24.jpg" data-ratio="0.631094" data-src="http://hjimg.andus-china.com/pzhj/images/dbs_24.jpg"></section>
+        <section><img src="http://hjimg.andus-china.com/pzhj/images/dbs_25.jpg" data-ratio="0.088274" data-src="http://hjimg.andus-china.com/pzhj/images/dbs_25.jpg"></section>
+
+        <div class="js-form">
+            <form action="#" id="buyForm">
+                <table>
+                    <colgroup>
+                        <col width="25%">
+                        <col width="75%">
+                    </colgroup>
+                    <tr>
+                        <td><strong>*</strong>套餐选择</td>
+                        <td class="sale-type">
+                            <div>
+                                <span class="selected" data-type="1" data-price="196" data-name="买1支送1支196元">买1支送1支196元</span>
+                            </div>
+                            <div>
+                                <span data-type="2" data-price="528" data-name="买3支送3支528元">买3支送3支528元</span>
+                            </div>
+                            <div>
+                                <span data-type="3" data-price="936" data-name="买1箱送1箱">买1箱送1箱936元</span>
+                            </div>
+                            <input type="hidden" name="saletype">
+                            <input type="hidden" name="saleprice" id="saleprice" value="">
+                        </td>
+                    </tr>
+                    <tr class="add-minus">
+                        <td><strong>*</strong>定单数量</td>
+                        <td><span>-</span><input type="text" value="1" id="txtcount"><span>+</span></td>
+                    </tr>
+                    <tr>
+                        <td>定单价格</td>
+                        <td><strong class="price">196.00</strong><span class="pt5">元</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>*</strong>收货人名</td>
+                        <td><input class="js-input" name="username" type="text" placeholder="请输入您的姓名或称呼"></td>
+                    </tr>
+                    <tr>
+                        <td><strong>*</strong>手机号码</td>
+                        <td>
+                            <input class="js-input" name="phone" style="width:50%" type="text" id="txtphone" placeholder="请输入您的手机号码">
+                            <script type="text/javascript">
+                                var countdown = 60;
+                                function setcode(obj) {
+                                    var issuccess = false;
+                                    $.post("/OrderServiceX/ValidateCode?rd=" + Math.random(), { phone: $.trim($("#txtphone").val()), md: Math.random() }, function (data) {
+
+                                        if (data.state != "success") {
+                                            alert('验证码发送失败，请从新点击发送');
+                                            window.location.reload();
+                                            return;
+                                        }
+                                    });
+
+                                    settime(obj);
+                                }
+                                function settime(obj) {
+
+                                    if (countdown == 0) {
+                                        obj.removeAttribute("disabled");
+                                        obj.value = "获取验证码";
+                                        countdown = 60;
+
+                                        return;
+                                    } else {
+                                        obj.setAttribute("disabled", true);
+                                        obj.value = "重新发送(" + countdown + ")";
+                                        countdown--;
+                                    }
+                                    setTimeout(function () {
+                                        settime(obj)
+                                    }
+                                        , 1000)
+                                }
+
+                            </script>
+                            <input type="button" id="button1" style="width:25%;width:100px;line-height:18px;" value="获取验证码" onclick="setcode(this)" />
+
+
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>*</strong>验证码</td>
+                        <td><input class="js-input" name="txtcode" type="text" id="txtcode" style="width:30%" placeholder="请输入您的短信验证码"></td>
+                    </tr>
+                    <tr>
+                        <td><strong>*</strong>选择地区</td>
+                        <td><input class="js-input" name="area" type="text" id="city-picker" placeholder="请输入您的所在地区"></td>
+                    </tr>
+                    <tr>
+                        <td><strong>*</strong>详细地址</td>
+                        <td><textarea class="js-input" name="addess" placeholder="请填写您的详细地址"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td>留言备注</td>
+                        <td><textarea class="js-input" name="msg" data-noneed="1" placeholder="如备用电话、商品数量、收货时间等，有额外需求请留言"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td><strong>*</strong>支付方式</td>
+                        <td>
+                            <div><img src="http://hjimg.andus-china.com/xy/paytype.jpg" style="width:50%"></div>
+                            <div class="btmsg">选择货到付款，安全放心</div>
+                        </td>
+                    </tr>
+                </table>
+
+            </form>
+
+        </div>
+        <section class="js-submit">
+            <img src="http://hjimg.andus-china.com/pzhj/images/dbs_27.jpg" data-ratio="0.213439" data-src="http://hjimg.andus-china.com/pzhj/images/dbs_27.jpg">
+        </section>
+    </div>
+    <div style="text-align:center;">
+        <p>深圳市前海佰迈投资有限公司</p>
+        <p>京ICP备16030066号-1</p>
+
+
+    </div>
+    <script type="text/javascript">
+
+        function GetQueryString(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return unescape(r[2]); return null;
+        }
+    </script>
+    <script type="text/javascript" src="/Content/jsstorage/pzhjapp.js"></script>
+</body>
+ 
+</html>
