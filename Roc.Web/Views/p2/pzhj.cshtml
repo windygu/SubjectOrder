@@ -15,6 +15,7 @@
     <script src="/Content/xy/js/jquery-weui.js"></script>
     <script src="/Content/jsstorage/hj/city-picker.min.js"></script>
     <link href="/Content/jsstorage/layer_mobile/need/layer.css" rel="stylesheet" />
+    
     <style>
         body, html {
             margin: 0;
@@ -150,6 +151,7 @@
             margin: 0 auto;
             max-width: 750px;
         }
+
         .js-gotoform {
             cursor: pointer;
         }
@@ -160,6 +162,8 @@
     <div class="wapper">
         <section><img src="http://hjimg.andus-china.com/pzhj/images/dbs_01.jpg" data-ratio="0.529644" data-src="http://hjimg.andus-china.com/pzhj/images/dbs_01.jpg"></section>
         <section><img src="http://hjimg.andus-china.com/pzhj/images/dbs_02.jpg" data-ratio="1.249012" data-src="http://hjimg.andus-china.com/pzhj/images/dbs_02.jpg"></section>
+        <section class="js-gotoform"><img src="/Content/hjimages/fh.jpg" data-ratio="0.449275" data-src="/Content/hjimages/fh.jpg"></section>
+        <section class="js-gotoform"><img src="/Content/hjimages/tel.jpg" data-ratio="0.449275" data-src="/Content/hjimages/tel.jpg"></section>
         <section class="js-gotoform"><img src="http://hjimg.andus-china.com/pzhj/images/dbs_03.jpg" data-ratio="0.449275" data-src="http://hjimg.andus-china.com/pzhj/images/dbs_03.jpg"></section>
         <section><img src="http://hjimg.andus-china.com/pzhj/images/dbs_04.jpg" data-ratio="1.299078" data-src="http://hjimg.andus-china.com/pzhj/images/dbs_04.jpg"></section>
         <section><img src="http://hjimg.andus-china.com/pzhj/images/dbs_05.jpg" data-ratio="1.512516" data-src="http://hjimg.andus-china.com/pzhj/images/dbs_05.jpg"></section>
@@ -195,13 +199,13 @@
                         <td><strong>*</strong>套餐选择</td>
                         <td class="sale-type">
                             <div>
-                                <span class="selected" data-type="1" data-price="196" data-name="买1支送1支196元">买1支送1支196元</span>
+                                <span class="selected" data-type="1" data-price="268" data-name="买1支送1支268元(2支)">买1支送1支268元(2支)</span>
                             </div>
                             <div>
-                                <span data-type="2" data-price="528" data-name="买3支送3支528元">买3支送3支528元</span>
+                                <span data-type="2" data-price="728" data-name="买3支送3支728元(6支)">买3支送3支728元(6支)</span>
                             </div>
                             <div>
-                                <span data-type="3" data-price="936" data-name="买1箱送1箱">买1箱送1箱936元</span>
+                                <span data-type="3" data-price="1188" data-name="买1箱送1箱1188元(12支)">买1箱送1箱1188元(12支)</span>
                             </div>
                             <input type="hidden" name="saletype">
                             <input type="hidden" name="saleprice" id="saleprice" value="">
@@ -213,7 +217,7 @@
                     </tr>
                     <tr>
                         <td>定单价格</td>
-                        <td><strong class="price">196.00</strong><span class="pt5">元</span></td>
+                        <td><strong class="price">268.00</strong><span class="pt5">元</span></td>
                     </tr>
                     <tr>
                         <td><strong>*</strong>收货人名</td>
@@ -293,6 +297,10 @@
 
         </div>
         <section class="js-submit">
+            <img src="/Content/hjimages/fh.jpg" data-ratio="0.213439" data-src="/Content/hjimages/fh.jpg">
+        </section>
+        <section class="js-gotoform"><img src="/Content/hjimages/tel.jpg" data-ratio="0.449275" data-src="/Content/hjimages/tel.jpg"></section>
+        <section class="js-submit">
             <img src="http://hjimg.andus-china.com/pzhj/images/dbs_27.jpg" data-ratio="0.213439" data-src="http://hjimg.andus-china.com/pzhj/images/dbs_27.jpg">
         </section>
     </div>
@@ -309,8 +317,14 @@
             var r = window.location.search.substr(1).match(reg);
             if (r != null) return unescape(r[2]); return null;
         }
+        $(function () {
+            $("#city-picker").cityPicker({
+                title: "请选择收货地址"
+            });
+        });
+
     </script>
     <script type="text/javascript" src="/Content/jsstorage/pzhjapp.js"></script>
 </body>
- 
+
 </html>
